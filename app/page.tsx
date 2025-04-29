@@ -31,7 +31,7 @@ export default function Home() {
             Hi! I am <span className="font-bold text-purple-400">Raul</span>.
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-2">
-            I make <span className="font-bold text-purple-400">games</span>, interactive experiences, products and
+            I make <span className="font-bold text-purple-400">games</span>, prototypes, debugging and
             everything in-between.
           </p>
           <p className="text-2xl md:text-3xl text-gray-300">
