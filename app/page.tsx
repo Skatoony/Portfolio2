@@ -28,7 +28,7 @@ export default function Home() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 pt-32 pb-16">
         <div className="max-w-3xl mb-24">
           <h1 className="text-4xl md:text-5xl font-medium text-white mb-4">
-            Hi! I am <span className="font-bold text-purple-400">Raull</span>.
+            Hi! I am <span className="font-bold text-purple-400">Raul</span>.
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-2">
             I make <span className="font-bold text-purple-400">games</span>, interactive experiences, products and
