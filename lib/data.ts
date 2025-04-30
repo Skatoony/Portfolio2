@@ -198,7 +198,7 @@ I contributed as a front-end developer for Monkey Empire, designing and implemen
     ],
     youtubeUrl: "https://www.youtube.com/watch?v=XrWqlCJ81Vk",
     url: "/projects/monkey-empire",
-    tags: ["Unreal Engine", "MMO-RTS","Crypto", "Front-End"],
+    tags: ["Unreal Engine", "MMO-RTS", "Front-End"],
     year: "2022",
     role: "Team Member Developer",
     tools: ["Unreal Engine", "MMO-RTS", "Front-End", "UI/UX", "Crypto", "Shipped - Mobile"],
