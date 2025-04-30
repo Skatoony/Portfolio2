@@ -8,17 +8,20 @@ export default function Home() {
     <main className="relative min-h-screen w-full overflow-hidden bg-black text-white">
       <NetworkBackground />
 
-      <nav className="absolute top-0 right-0 p-4 md:p-8 z-10">
-        <div className="flex gap-4">
+      {/* Increased z-index and improved mobile styling */}
+      <nav className="absolute top-0 right-0 p-4 md:p-8 z-30">
+        <div className="flex gap-3">
           <Link
             href="#work"
-            className="bg-purple-700 text-white px-4 md:px-6 py-2 rounded-md hover:bg-purple-600 transition-colors"
+            className="bg-purple-700 text-white px-4 md:px-6 py-3 md:py-2 rounded-md hover:bg-purple-600 transition-colors text-sm md:text-base font-medium"
+            aria-label="View my work"
           >
             Work
           </Link>
           <Link
             href="/about"
-            className="bg-transparent text-white border border-white/30 px-4 md:px-6 py-2 rounded-md hover:bg-white/10 transition-colors"
+            className="bg-transparent text-white border border-white/30 px-4 md:px-6 py-3 md:py-2 rounded-md hover:bg-white/10 transition-colors text-sm md:text-base font-medium"
+            aria-label="About me page"
           >
             About Me
           </Link>

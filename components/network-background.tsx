@@ -34,8 +34,8 @@ export default function NetworkBackground() {
     let particles: Particle[] = []
 
     // Adjust particle count and connection distance based on device
-    const particleCount = isMobile ? 50 : 80 // Increased from 40 to 50 for mobile
-    const connectionDistance = isMobile ? 150 : 180 // Increased from 120 to 150 for mobile
+    const particleCount = isMobile ? 50 : 80
+    const connectionDistance = isMobile ? 150 : 180
 
     // First, define the Particle class before using it
     class Particle {
@@ -51,7 +51,7 @@ export default function NetworkBackground() {
       constructor() {
         this.x = Math.random() * canvas.width
         this.y = Math.random() * canvas.height
-        this.size = Math.random() * (isMobile ? 3 : 2.5) + 1.5 // Increased size for mobile
+        this.size = Math.random() * (isMobile ? 3 : 2.5) + 1.5
 
         // Slower movement on mobile for better performance but not too slow
         const speedFactor = isMobile ? 0.5 : 0.6
@@ -140,7 +140,7 @@ export default function NetworkBackground() {
     // Connect particles with lines - optimize for mobile
     const connect = () => {
       // On mobile, check fewer connections for better performance
-      const skipFactor = isMobile ? 1 : 1 // Changed from 2 to 1 for mobile to show more connections
+      const skipFactor = isMobile ? 1 : 1
 
       for (let a = 0; a < particles.length; a += skipFactor) {
         for (let b = a; b < particles.length; b += skipFactor) {
@@ -209,5 +209,6 @@ export default function NetworkBackground() {
     }
   }, [isMobile]) // Re-initialize when isMobile changes
 
+  // Lower z-index to ensure navigation is clickable
   return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0" />
 }

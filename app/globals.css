@@ -96,3 +96,11 @@
     margin-bottom: 0.75rem;
   }
 }
+
+/* Ensure navigation buttons are clickable */
+nav a {
+  position: relative;
+  z-index: 50;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
