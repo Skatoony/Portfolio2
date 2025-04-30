@@ -120,15 +120,15 @@ I implemented a FIFA-inspired main menu design from Figma into Unreal Engine, bu
   },
   {
     id: "5",
-    slug: "puzzle-dimensions",
-    title: "Puzzle Dimensions",
+    slug: "metahuman-character-creator",
+    title: "MetaHuman Character Creator",
     description: "A mind-bending puzzle game that plays with spatial dimensions and physics.",
     fullDescription: `Puzzle Dimensions challenges players' perception and spatial reasoning with puzzles that manipulate dimensions, gravity, and physics. The game progresses from simple 3D puzzles to mind-bending 4D concepts that require thinking beyond conventional space.
 
 Each level introduces new mechanics that build upon previous concepts, creating a carefully designed difficulty curve that teaches through gameplay rather than tutorials. The minimalist art style uses color and shape to communicate function, allowing players to focus on the puzzles themselves.
 
 I implemented a custom physics system that allows for the manipulation of gravity direction, object scale, and even time flow. The game includes over 75 hand-crafted puzzles and a level editor that lets players create and share their own challenges.`,
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/MetahumanBG.jpg?height=400&width=600",
     gallery: [
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",

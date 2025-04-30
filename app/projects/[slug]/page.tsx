@@ -253,8 +253,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                           >
-                            <Github className="w-4 h-4 mr-2" />
-                            View Source
+                            <Youtube className="w-4 h-4 mr-2" />
+                            Video
                           </a>
                         )}
 
