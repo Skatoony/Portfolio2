@@ -13,7 +13,7 @@ The game combines elements of business management, skill development, and creati
 I developed a custom job simulation system that generates realistic repair scenarios and tool usage based on the specific conditions of each project. The game also features a dynamic wear-and-tear system that impacts task difficulty and decision-making strategies.`,
     image: "/HandymanBG.jpg?height=400&width=600",
     gallery: [
-      "/placeholder.svg?height=600&width=800",
+      "/HandymanBG.jpg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800&text=Repair%20Tools",
