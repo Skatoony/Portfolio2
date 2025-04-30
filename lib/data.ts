@@ -14,7 +14,7 @@ I developed a custom job simulation system that generates realistic repair scena
     image: "/HandymanBG.jpg?height=400&width=600",
     gallery: [
       "/Handyman1.jpg?height=600&width=800",
-      "/Handyman2.jpgg?height=600&width=800",
+      "/Handyman2.jpg?height=600&width=800",
       "/Handyman3.jpg?height=600&width=800",
       "/Handyman4.jpg?height=600&width=800&text=Repair%20Tools",
       "/Handyman5.jpg?height=600&width=800&text=Job%20Site",
