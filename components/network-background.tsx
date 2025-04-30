@@ -33,8 +33,8 @@ export default function NetworkBackground() {
     let animationFrameId: number
     let particles: Particle[] = []
 
-    // Adjust particle count and connection distance based on device
-    const particleCount = isMobile ? 50 : 80
+    // Significantly increased particle count for mobile, kept desktop the same
+    const particleCount = isMobile ? 100 : 80 // Increased from 50 to 100 for mobile
     const connectionDistance = isMobile ? 150 : 180
 
     // First, define the Particle class before using it
@@ -53,8 +53,8 @@ export default function NetworkBackground() {
         this.y = Math.random() * canvas.height
         this.size = Math.random() * (isMobile ? 3 : 2.5) + 1.5
 
-        // Slower movement on mobile for better performance but not too slow
-        const speedFactor = isMobile ? 0.5 : 0.6
+        // Slightly faster movement on mobile with more particles for more dynamic effect
+        const speedFactor = isMobile ? 0.6 : 0.6
         this.speedX = (Math.random() - 0.5) * speedFactor
         this.speedY = (Math.random() - 0.5) * speedFactor
 
@@ -139,11 +139,17 @@ export default function NetworkBackground() {
 
     // Connect particles with lines - optimize for mobile
     const connect = () => {
-      // On mobile, check fewer connections for better performance
-      const skipFactor = isMobile ? 1 : 1
+      // On mobile with more particles, we need to skip some connections for performance
+      // but still show enough to be visible
+      const skipFactor = isMobile ? 2 : 1 // Skip every other particle on mobile for performance
 
       for (let a = 0; a < particles.length; a += skipFactor) {
-        for (let b = a; b < particles.length; b += skipFactor) {
+        // Limit the number of connections per particle on mobile for performance
+        const connectionsPerParticle = isMobile ? 5 : particles.length
+
+        for (let b = a; b < Math.min(a + connectionsPerParticle, particles.length); b += skipFactor) {
+          if (a === b) continue // Skip self
+
           const dx = particles[a].x - particles[b].x
           const dy = particles[a].y - particles[b].y
           const distance = Math.sqrt(dx * dx + dy * dy)
@@ -186,7 +192,7 @@ export default function NetworkBackground() {
     const animate = () => {
       // Use a semi-transparent black clear to create trail effect
       // Less transparent on mobile for more visible particles
-      ctx!.fillStyle = `rgba(0, 0, 0, ${isMobile ? 0.08 : 0.05})`
+      ctx!.fillStyle = `rgba(0, 0, 0, ${isMobile ? 0.1 : 0.05})`
       ctx!.fillRect(0, 0, canvas.width, canvas.height)
 
       particles.forEach((particle) => {
