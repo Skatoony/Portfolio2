@@ -5,43 +5,12 @@ export const projects: ProjectType[] = [
     id: "1",
     slug: "cosmic-explorers",
     title: "Handyman Corporation",
-    description: "A space exploration game with procedurally generated planets and ecosystems.",
-    fullDescription: `Cosmic Explorers is an immersive space exploration game that takes players on a journey through a vast, procedurally generated universe. Each planet features unique ecosystems, creatures, and resources to discover.
+    description: "A handyman simulation game with procedurally generated tasks and repair challenges.",
+    fullDescription: `Handyman Corporation is an immersive simulation game that takes players on a journey through the world of home improvement and repair. Each job features unique challenges, tools, and tasks to master.
 
-The game combines elements of survival, base building, and scientific discovery as players navigate through the cosmos in their customizable spacecraft. The procedural generation system ensures that no two playthroughs are ever the same, with billions of possible planet configurations.
+The game combines elements of business management, skill development, and creative problem-solving as players grow their handyman business and tackle increasingly complex projects. The procedural generation system ensures that no two playthroughs are ever the same, with countless job configurations and repair scenarios.
 
-I developed a custom ecosystem simulation that creates believable food chains and creature behaviors based on the environmental conditions of each planet. The game also features a dynamic weather system that affects gameplay and exploration strategies.`,
-    image: "/HandymanBG.svg?height=400&width=600",
-    gallery: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800&text=Cosmic%20UI",
-      "/placeholder.svg?height=600&width=800&text=Space%20Station",
-    ],
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    url: "/projects/cosmic-explorers",
-    tags: ["Unity", "3D", "Procedural Generation"],
-    year: "2023",
-    role: "Lead Developer & Game Designer",
-    tools: ["Unity", "C#", "Blender", "Substance Painter", "FMOD"],
-    links: {
-      demo: "https://example.com/cosmic-explorers-demo",
-      github: "https://github.com/yourusername/cosmic-explorers",
-      download: "https://example.com/cosmic-explorers-download",
-    },
-  },
-  {
-    id: "2",
-    slug: "pixel-kingdom",
-    title: "Pixel Kingdom",
-    description: "A retro-style RPG with a unique combat system and branching storylines.",
-    fullDescription: `Pixel Kingdom is a nostalgic journey into the golden age of RPGs, featuring a rich narrative with multiple branching storylines that respond to player choices. The game's unique combat system combines traditional turn-based mechanics with real-time elements, creating a fresh yet familiar experience.
-
-I designed the game to capture the essence of classic RPGs while introducing modern gameplay innovations. The pixel art style pays homage to the 16-bit era while incorporating subtle modern effects like dynamic lighting and particle systems.
-
-The narrative explores themes of power, corruption, and redemption across six distinct kingdoms, each with its own culture, challenges, and characters. Players can forge alliances, make enemies, and shape the world through their decisions.`,
+I developed a custom job simulation system that generates realistic repair scenarios and tool usage based on the specific conditions of each project. The game also features a dynamic wear-and-tear system that impacts task difficulty and decision-making strategies.`,
     image: "/placeholder.svg?height=400&width=600",
     gallery: [
       "/placeholder.svg?height=600&width=800",
@@ -50,15 +19,15 @@ The narrative explores themes of power, corruption, and redemption across six di
       "/placeholder.svg?height=600&width=800&text=Combat%20System",
       "/placeholder.svg?height=600&width=800&text=Character%20Creation",
     ],
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    youtubeUrl: "https://www.youtube.com/watch?v=lVBhSpG9CHY",
     url: "/projects/pixel-kingdom",
-    tags: ["Godot", "2D", "RPG"],
-    year: "2022",
+    tags: ["Unreal Engine", "Simulator", "Full Game"],
+    year: "2023",
     role: "Solo Developer",
     tools: ["Godot Engine", "GDScript", "Aseprite", "Tiled"],
     links: {
       demo: "https://example.com/pixel-kingdom-demo",
-      store: "https://store.steampowered.com/app/example",
+      store: "https://store.steampowered.com/app/1703180/Handyman_Corporation/",
     },
   },
   {
