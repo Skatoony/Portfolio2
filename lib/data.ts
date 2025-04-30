@@ -19,7 +19,7 @@ I developed a custom job simulation system that generates realistic repair scena
       "/placeholder.svg?height=600&width=800&text=Combat%20System",
       "/placeholder.svg?height=600&width=800&text=Character%20Creation",
     ],
-    youtubeUrl: "https://www.youtube.com/watch?v=lVBhSpG9CHY",
+    youtubeUrl: "https://www.youtube.com/watch?v=fr-_j1miLzY",
     url: "/projects/pixel-kingdom",
     tags: ["Unreal Engine", "Simulator", "Full Game"],
     year: "2023",
