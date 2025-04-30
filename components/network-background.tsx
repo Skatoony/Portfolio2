@@ -1,9 +1,27 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function NetworkBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Initial check
+    checkMobile()
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile)
+
+    return () => {
+      window.removeEventListener("resize", checkMobile)
+    }
+  }, [])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -14,8 +32,10 @@ export default function NetworkBackground() {
 
     let animationFrameId: number
     let particles: Particle[] = []
-    const particleCount = 80
-    const connectionDistance = 180
+
+    // Adjust particle count and connection distance based on device
+    const particleCount = isMobile ? 40 : 80
+    const connectionDistance = isMobile ? 120 : 180
 
     // First, define the Particle class before using it
     class Particle {
@@ -31,9 +51,12 @@ export default function NetworkBackground() {
       constructor() {
         this.x = Math.random() * canvas.width
         this.y = Math.random() * canvas.height
-        this.size = Math.random() * 2.5 + 1
-        this.speedX = (Math.random() - 0.5) * 0.6
-        this.speedY = (Math.random() - 0.5) * 0.6
+        this.size = Math.random() * (isMobile ? 2 : 2.5) + 1
+
+        // Slower movement on mobile for better performance
+        const speedFactor = isMobile ? 0.4 : 0.6
+        this.speedX = (Math.random() - 0.5) * speedFactor
+        this.speedY = (Math.random() - 0.5) * speedFactor
 
         // Brighter colors for black background
         const colors = [
@@ -62,12 +85,13 @@ export default function NetworkBackground() {
           this.speedY = -this.speedY
         }
 
-        // Update pulse effect
+        // Update pulse effect - slower on mobile
+        const pulseSpeed = isMobile ? 0.005 : 0.01
         if (this.pulseDirection) {
-          this.pulseIntensity += 0.01
+          this.pulseIntensity += pulseSpeed
           if (this.pulseIntensity > 1) this.pulseDirection = false
         } else {
-          this.pulseIntensity -= 0.01
+          this.pulseIntensity -= pulseSpeed
           if (this.pulseIntensity < 0.5) this.pulseDirection = true
         }
       }
@@ -91,15 +115,28 @@ export default function NetworkBackground() {
 
     // Then define the resizeCanvas function that calls init
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      // Set to device pixel ratio for better rendering on high DPI screens
+      const dpr = window.devicePixelRatio || 1
+      canvas.width = window.innerWidth * dpr
+      canvas.height = window.innerHeight * dpr
+
+      // Scale the context to ensure correct drawing operations
+      ctx.scale(dpr, dpr)
+
+      // Set the CSS size
+      canvas.style.width = `${window.innerWidth}px`
+      canvas.style.height = `${window.innerHeight}px`
+
       init()
     }
 
-    // Connect particles with lines
+    // Connect particles with lines - optimize for mobile
     const connect = () => {
-      for (let a = 0; a < particles.length; a++) {
-        for (let b = a; b < particles.length; b++) {
+      // On mobile, check fewer connections for better performance
+      const skipFactor = isMobile ? 2 : 1
+
+      for (let a = 0; a < particles.length; a += skipFactor) {
+        for (let b = a; b < particles.length; b += skipFactor) {
           const dx = particles[a].x - particles[b].x
           const dy = particles[a].y - particles[b].y
           const distance = Math.sqrt(dx * dx + dy * dy)
@@ -125,8 +162,9 @@ export default function NetworkBackground() {
               gradient.addColorStop(1, `rgba(226, 232, 240, ${opacity * 0.5})`)
             }
 
+            // Thinner lines on mobile
             ctx!.strokeStyle = gradient
-            ctx!.lineWidth = 1.5 * opacity // Thicker lines
+            ctx!.lineWidth = isMobile ? opacity : 1.5 * opacity
             ctx!.beginPath()
             ctx!.moveTo(particles[a].x, particles[a].y)
             ctx!.lineTo(particles[b].x, particles[b].y)
@@ -136,10 +174,11 @@ export default function NetworkBackground() {
       }
     }
 
-    // Animation loop
+    // Animation loop - optimize for mobile
     const animate = () => {
       // Use a semi-transparent black clear to create trail effect
-      ctx!.fillStyle = "rgba(0, 0, 0, 0.05)" // Very subtle trail effect with black
+      // More transparent on mobile for better performance
+      ctx!.fillStyle = `rgba(0, 0, 0, ${isMobile ? 0.1 : 0.05})`
       ctx!.fillRect(0, 0, canvas.width, canvas.height)
 
       particles.forEach((particle) => {
@@ -160,7 +199,7 @@ export default function NetworkBackground() {
       window.removeEventListener("resize", resizeCanvas)
       cancelAnimationFrame(animationFrameId)
     }
-  }, [])
+  }, [isMobile]) // Re-initialize when isMobile changes
 
   return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0" />
 }

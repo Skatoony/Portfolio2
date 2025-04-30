@@ -7,13 +7,13 @@ export default function AboutPage() {
     <main className="relative min-h-screen w-full overflow-hidden bg-black text-white">
       <NetworkBackground />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 pt-16 pb-16">
-        <Link href="/" className="inline-flex items-center text-gray-300 hover:text-white mb-8">
-          <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-8 md:py-16">
+        <Link href="/" className="inline-flex items-center text-gray-300 hover:text-white mb-8 group">
+          <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
           Back to home
         </Link>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">About Me</h1>
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 md:mb-8">About Me</h1>
 
         <div className="prose prose-lg prose-invert max-w-none">
           <p>
