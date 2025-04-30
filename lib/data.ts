@@ -177,6 +177,37 @@ I developed Duck Flight Simulator, a remake of the 1984 classic Duck Hunt, withi
       store: "https://store.steampowered.com/app/1519190/Duck_Flight_Simulator_2021/",
     },
   },
+  {
+    id: "7",
+    slug: "monkey-empire",
+    title: "Monkey Empire",
+    description: "An MMO-RTS inspired by Clash of Clans, Monkey Empire lets players build empires, loot crypto, and dominate the ape world using blockchain-powered gameplay",
+    fullDescription: `Mystic Forest is an atmospheric adventure that follows a young spirit guardian navigating an ancient forest filled with forgotten magic and mysterious creatures. The game features hand-drawn artwork that brings the enchanted world to life, complemented by an immersive soundscape that responds to player actions and environment changes.
+
+Monkey Empire is an MMO-RTS game inspired by Clash of Clans and Guns of Glory, built using Unreal Engine 5. It offers a cross-platform experience where players manage a tribe of 
+monkeys to build cities, collect resources, train armies, and raid other players to loot cryptocurrency, MonkeyCoin.
+ With a blockchain-driven economy, the game introduces NFT BluePrints that unlock technological advancements, offering endless opportunities for strategy and trade.
+
+I contributed as a front-end developer for Monkey Empire, designing and implementing the UI/UX while integrating backend systems to handle crypto transactions. My work ensured smooth interaction between the blockchain features and the core gameplay experience.`,
+    image: "/MonkeyEmpireBG.jpg?height=400&width=600",
+    gallery: [
+      "/MonkeyEmpire1.jpg?height=600&width=800",
+      "/MonkeyEmpire2.jpg?height=600&width=800",
+      "/MonkeyEmpire3.jpg?height=600&width=800",
+      "/MonkeyEmpire4.jpg?height=600&width=800",
+    ],
+    youtubeUrl: "https://www.youtube.com/watch?v=XrWqlCJ81Vk",
+    url: "/projects/monkey-empire",
+    tags: ["Unreal Engine", "MMO-RTS","Crypto", "Front-End"],
+    year: "2022",
+    role: "Team Member Developer",
+    tools: ["Unreal Engine", "MMO-RTS", "Front-End", "UI/UX", "Crypto", "Shipped - Mobile"],
+    links: {
+      demo: "",
+      github: "https://www.youtube.com/watch?v=XrWqlCJ81Vk",
+      store: "",
+    },
+  },
 ]
 
 export function getProjectBySlug(slug: string): ProjectType | undefined {
