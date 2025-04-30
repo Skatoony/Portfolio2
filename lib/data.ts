@@ -24,7 +24,7 @@ I developed a custom job simulation system that generates realistic repair scena
     tags: ["Unreal Engine", "Simulator", "Full Game"],
     year: "2023",
     role: "Solo Developer",
-    tools: ["Unreal Engine", "Simulator", "Shipped"],
+    tools: ["Unreal Engine", "Simulator", "Full Game", "Shipped"],
     links: {
       demo: "",
       store: "https://store.steampowered.com/app/1703180/Handyman_Corporation/",
@@ -77,7 +77,7 @@ I implemented a custom physics system that allows for the manipulation of gravit
       "/placeholder.svg?height=600&width=800&text=Level%20Editor",
       "/placeholder.svg?height=600&width=800&text=4D%20Puzzle",
     ],
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     url: "/projects/puzzle-dimensions",
     tags: ["Unity", "3D", "Puzzle"],
     year: "2021",
