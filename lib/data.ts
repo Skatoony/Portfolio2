@@ -11,13 +11,13 @@ export const projects: ProjectType[] = [
 The game combines elements of business management, skill development, and creative problem-solving as players grow their handyman business and tackle increasingly complex projects. The procedural generation system ensures that no two playthroughs are ever the same, with countless job configurations and repair scenarios.
 
 I developed a custom job simulation system that generates realistic repair scenarios and tool usage based on the specific conditions of each project. The game also features a dynamic wear-and-tear system that impacts task difficulty and decision-making strategies.`,
-    image: "/HandymanBG.svg?height=400&width=600",
+    image: "/HandymanBG.jpg?height=400&width=600",
     gallery: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800&text=Repair%20Tools",
-      "/placeholder.svg?height=600&width=800&text=Job%20Site",
+      "/Handyman1.jpg?height=600&width=800",
+      "/Handyman2.jpgg?height=600&width=800",
+      "/Handyman3.jpg?height=600&width=800",
+      "/Handyman4.jpg?height=600&width=800&text=Repair%20Tools",
+      "/Handyman5.jpg?height=600&width=800&text=Job%20Site",
     ],
     youtubeUrl: "https://www.youtube.com/watch?v=fr-_j1miLzY",
     url: "/projects/handyman-corporation",
