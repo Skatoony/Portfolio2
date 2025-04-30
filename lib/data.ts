@@ -122,12 +122,11 @@ I implemented a FIFA-inspired main menu design from Figma into Unreal Engine, bu
     id: "5",
     slug: "metahuman-character-creator",
     title: "MetaHuman Character Creator",
-    description: "A mind-bending puzzle game that plays with spatial dimensions and physics.",
-    fullDescription: `Puzzle Dimensions challenges players' perception and spatial reasoning with puzzles that manipulate dimensions, gravity, and physics. The game progresses from simple 3D puzzles to mind-bending 4D concepts that require thinking beyond conventional space.
+    description: "A MetaHuman character editor that allows customization of face shape, hair style, and the color of eyes, hair, and skin..",
+    fullDescription: `The MetaHuman character editor provides an intuitive and versatile toolset for creating unique characters. Users can shape facial features, select hairstyles,
+     and customize the colors of eyes, hair, and skin. Designed with precision and flexibility, the system ensures a seamless character creation experience that brings lifelike avatars to life.
 
-Each level introduces new mechanics that build upon previous concepts, creating a carefully designed difficulty curve that teaches through gameplay rather than tutorials. The minimalist art style uses color and shape to communicate function, allowing players to focus on the puzzles themselves.
-
-I implemented a custom physics system that allows for the manipulation of gravity direction, object scale, and even time flow. The game includes over 75 hand-crafted puzzles and a level editor that lets players create and share their own challenges.`,
+I designed and implemented a MetaHuman character editor, enabling users to modify facial shapes, choose hairstyles, and customize colors for eyes, hair, and skin. I also combined multiple groom assets from other MetaHumans to achieve the desired results.`,
     image: "/MetahumanBG.jpg?height=400&width=600",
     gallery: [
       "/Metahuman1.jpg?height=600&width=800",
@@ -138,7 +137,7 @@ I implemented a custom physics system that allows for the manipulation of gravit
     ],
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     url: "/projects/metahuman-character-creator",
-    tags: ["Unity", "3D", "Puzzle"],
+    tags: ["Unreal Engine", "MetaHuman", "Puzzle"],
     year: "2022",
     role: "Solo Developer",
     tools: ["Unity", "C#", "Blender", "Adobe Illustrator"],
