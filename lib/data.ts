@@ -33,12 +33,12 @@ I developed a custom job simulation system that generates realistic repair scena
     id: "2",
     slug: "swordsman-vr",
     title: "Swordsman VR",
-    description: "A retro-style RPG with a unique combat system and branching storylines.",
-    fullDescription: `Pixel Kingdom is a nostalgic journey into the golden age of RPGs, featuring a rich narrative with multiple branching storylines that respond to player choices. The game's unique combat system combines traditional turn-based mechanics with real-time elements, creating a fresh yet familiar experience.
+    description: "A VR sword-fighting game with dynamic combat encounters and adaptive enemy strategies.",
+    fullDescription: `Swordsman VR is an immersive virtual reality sword-fighting game that takes players into intense, action-packed battles. Each encounter features uniquely skilled opponents, 
+    a variety of weapons, and challenging scenarios to master. The game combines realistic physics, tactical dueling, and character progression as players face diverse factions and powerful bosses. 
+    The dynamic combat system ensures every fight feels fresh and engaging, with countless ways to approach each battle.
 
-I designed the game to capture the essence of classic RPGs while introducing modern gameplay innovations. The pixel art style pays homage to the 16-bit era while incorporating subtle modern effects like dynamic lighting and particle systems.
-
-The narrative explores themes of power, corruption, and redemption across six distinct kingdoms, each with its own culture, challenges, and characters. Players can forge alliances, make enemies, and shape the world through their decisions.`,
+I designed core gameplay mechanics, implemented physics-based dismemberment, and refined the game through focused polishing to enhance the overall player experience.`,
     image: "/SwordsmanBG.jpg?height=400&width=600",
     gallery: [
       "/placeholder.svg?height=600&width=800",
