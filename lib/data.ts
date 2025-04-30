@@ -24,9 +24,9 @@ I developed a custom job simulation system that generates realistic repair scena
     tags: ["Unreal Engine", "Simulator", "Full Game"],
     year: "2023",
     role: "Solo Developer",
-    tools: ["Godot Engine", "GDScript", "Aseprite", "Tiled"],
+    tools: ["Unreal Engine", "Simulator", "Shipped"],
     links: {
-      demo: "https://example.com/pixel-kingdom-demo",
+      demo: "",
       store: "https://store.steampowered.com/app/1703180/Handyman_Corporation/",
     },
   },
