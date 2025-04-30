@@ -4,7 +4,7 @@ export const projects: ProjectType[] = [
   {
     id: "1",
     slug: "cosmic-explorers",
-    title: "Cosmic Explorers",
+    title: "Handyman Corporation",
     description: "A space exploration game with procedurally generated planets and ecosystems.",
     fullDescription: `Cosmic Explorers is an immersive space exploration game that takes players on a journey through a vast, procedurally generated universe. Each planet features unique ecosystems, creatures, and resources to discover.
 
