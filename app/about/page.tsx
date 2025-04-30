@@ -17,37 +17,38 @@ export default function AboutPage() {
 
         <div className="prose prose-lg prose-invert max-w-none">
           <p>
-            I'm a passionate game developer with a focus on creating immersive and engaging experiences. With expertise
-            in various game engines and programming languages, I bring creative ideas to life through interactive
-            digital experiences.
+            I am a skilled game developer with a strong focus on crafting immersive and engaging experiences using Unreal Engine. Leveraging its powerful tools and features, I bring creative visions to life, delivering interactive digital experiences that captivate and inspire.
           </p>
 
           <h2>Skills</h2>
           <ul>
             <li>Game Design & Development</li>
-            <li>Unity & Unreal Engine</li>
-            <li>3D Modeling & Animation</li>
-            <li>C#, C++, JavaScript</li>
-            <li>UI/UX Design for Games</li>
-            <li>Procedural Generation</li>
+            <li>Advance Gameplay, Game Logic & Game Rules</li>
+            <li>Multiplayer: Replications, Networking & Databases</li>
+            <li>Weapons, Fire Weapons & Fighting Logic</li>
+            <li>Gamemodes & Mechanics: Game Modes, Game Mechanics & Save Games</li>
+            <li>VR & AR</li>
+            <li>UI/UX for Games</li>
+            <li>Gameplay Ability System</li>
+            <li>EOS, Steam & Google</li>
+            <li>Environment & Map Optimization</li>
+            <li>Animations: Locomotion & State Machines</li>
+            <li>Login & Register</li>
+            <li>AI Development</li>
+            <li>Chaos Destruction & Fracture Plugin</li>
+            <li>Vehicle Logic & Vehicle Locomotion</li>
+            <li> Bug Fixes & Game Settings</li>
           </ul>
 
           <h2>Experience</h2>
           <p>
-            I've worked on a variety of projects ranging from indie mobile games to more complex PC and console titles.
-            My experience includes both solo development and collaboration with teams of various sizes.
-          </p>
-
-          <h2>Education</h2>
-          <p>
-            Bachelor's Degree in Computer Science with a focus on Game Development from [Your University]. I
-            continuously expand my knowledge through online courses and industry workshops.
+            I have experience working on a range of projects, from indie PC games to complex multiplayer and VR titles. My work includes both solo development and collaborating with diverse teams to deliver unique and engaging games.
           </p>
 
           <h2>Contact</h2>
           <p>
-            Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a> or
-            connect with me on <a href="#">Twitter</a>, <a href="#">LinkedIn</a>, or <a href="#">GitHub</a>.
+            Feel free to reach out to me at <a href="mailto:hpqdevpro@gmail.com">hpqdevpro@gmail.com</a> or
+            connect with me on <a href="discordapp.com/users/1259926949950918809">Discord</a>
           </p>
         </div>
       </div>
