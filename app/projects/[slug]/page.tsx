@@ -135,7 +135,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                           className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                         >
                           <ShoppingCart className="w-4 h-4 mr-2" />
-                          Purchase
+                          Steam
                         </a>
                       )}
                     </div>
