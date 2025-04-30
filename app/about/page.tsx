@@ -48,7 +48,7 @@ export default function AboutPage() {
           <h2>Contact</h2>
           <p>
             Feel free to reach out to me at <a href="mailto:hpqdevpro@gmail.com">hpqdevpro@gmail.com</a> or
-            connect with me on <a href="discordapp.com/users/1259926949950918809">Discord</a>
+            Connect with me on <a href="https://discordapp.com/users/1259926949950918809" target="_blank" rel="noopener noreferrer">Discord</a>
           </p>
         </div>
       </div>
