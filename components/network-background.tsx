@@ -34,8 +34,8 @@ export default function NetworkBackground() {
     let particles: Particle[] = []
 
     // Adjust particle count and connection distance based on device
-    const particleCount = isMobile ? 40 : 80
-    const connectionDistance = isMobile ? 120 : 180
+    const particleCount = isMobile ? 50 : 80 // Increased from 40 to 50 for mobile
+    const connectionDistance = isMobile ? 150 : 180 // Increased from 120 to 150 for mobile
 
     // First, define the Particle class before using it
     class Particle {
@@ -51,20 +51,27 @@ export default function NetworkBackground() {
       constructor() {
         this.x = Math.random() * canvas.width
         this.y = Math.random() * canvas.height
-        this.size = Math.random() * (isMobile ? 2 : 2.5) + 1
+        this.size = Math.random() * (isMobile ? 3 : 2.5) + 1.5 // Increased size for mobile
 
-        // Slower movement on mobile for better performance
-        const speedFactor = isMobile ? 0.4 : 0.6
+        // Slower movement on mobile for better performance but not too slow
+        const speedFactor = isMobile ? 0.5 : 0.6
         this.speedX = (Math.random() - 0.5) * speedFactor
         this.speedY = (Math.random() - 0.5) * speedFactor
 
-        // Brighter colors for black background
-        const colors = [
-          "rgba(203, 213, 225, 0.8)", // light slate
-          "rgba(186, 104, 255, 0.8)", // bright purple
-          "rgba(216, 180, 254, 0.8)", // lighter purple
-          "rgba(192, 132, 252, 0.8)", // bright violet
-        ]
+        // Brighter colors for mobile - increased opacity
+        const colors = isMobile
+          ? [
+              "rgba(223, 230, 238, 0.95)", // brighter light slate
+              "rgba(206, 144, 255, 0.95)", // brighter purple
+              "rgba(226, 200, 254, 0.95)", // brighter lighter purple
+              "rgba(212, 162, 252, 0.95)", // brighter violet
+            ]
+          : [
+              "rgba(203, 213, 225, 0.8)", // light slate
+              "rgba(186, 104, 255, 0.8)", // bright purple
+              "rgba(216, 180, 254, 0.8)", // lighter purple
+              "rgba(192, 132, 252, 0.8)", // bright violet
+            ]
         this.color = colors[Math.floor(Math.random() * colors.length)]
 
         // For pulse effect (size variation)
@@ -86,7 +93,7 @@ export default function NetworkBackground() {
         }
 
         // Update pulse effect - slower on mobile
-        const pulseSpeed = isMobile ? 0.005 : 0.01
+        const pulseSpeed = isMobile ? 0.008 : 0.01
         if (this.pulseDirection) {
           this.pulseIntensity += pulseSpeed
           if (this.pulseIntensity > 1) this.pulseDirection = false
@@ -133,7 +140,7 @@ export default function NetworkBackground() {
     // Connect particles with lines - optimize for mobile
     const connect = () => {
       // On mobile, check fewer connections for better performance
-      const skipFactor = isMobile ? 2 : 1
+      const skipFactor = isMobile ? 1 : 1 // Changed from 2 to 1 for mobile to show more connections
 
       for (let a = 0; a < particles.length; a += skipFactor) {
         for (let b = a; b < particles.length; b += skipFactor) {
@@ -154,17 +161,18 @@ export default function NetworkBackground() {
             // Create gradient for connections - brighter for black background
             const gradient = ctx!.createLinearGradient(particles[a].x, particles[a].y, particles[b].x, particles[b].y)
 
+            // Brighter connections for mobile
             if (isPurple) {
-              gradient.addColorStop(0, `rgba(186, 104, 255, ${opacity * 0.6})`)
-              gradient.addColorStop(1, `rgba(216, 180, 254, ${opacity * 0.6})`)
+              gradient.addColorStop(0, `rgba(206, 144, 255, ${isMobile ? opacity * 0.8 : opacity * 0.6})`)
+              gradient.addColorStop(1, `rgba(226, 200, 254, ${isMobile ? opacity * 0.8 : opacity * 0.6})`)
             } else {
-              gradient.addColorStop(0, `rgba(203, 213, 225, ${opacity * 0.5})`)
-              gradient.addColorStop(1, `rgba(226, 232, 240, ${opacity * 0.5})`)
+              gradient.addColorStop(0, `rgba(223, 230, 238, ${isMobile ? opacity * 0.7 : opacity * 0.5})`)
+              gradient.addColorStop(1, `rgba(236, 240, 245, ${isMobile ? opacity * 0.7 : opacity * 0.5})`)
             }
 
-            // Thinner lines on mobile
+            // Thicker lines on mobile for visibility
             ctx!.strokeStyle = gradient
-            ctx!.lineWidth = isMobile ? opacity : 1.5 * opacity
+            ctx!.lineWidth = isMobile ? opacity * 1.2 : 1.5 * opacity
             ctx!.beginPath()
             ctx!.moveTo(particles[a].x, particles[a].y)
             ctx!.lineTo(particles[b].x, particles[b].y)
@@ -177,8 +185,8 @@ export default function NetworkBackground() {
     // Animation loop - optimize for mobile
     const animate = () => {
       // Use a semi-transparent black clear to create trail effect
-      // More transparent on mobile for better performance
-      ctx!.fillStyle = `rgba(0, 0, 0, ${isMobile ? 0.1 : 0.05})`
+      // Less transparent on mobile for more visible particles
+      ctx!.fillStyle = `rgba(0, 0, 0, ${isMobile ? 0.08 : 0.05})`
       ctx!.fillRect(0, 0, canvas.width, canvas.height)
 
       particles.forEach((particle) => {
