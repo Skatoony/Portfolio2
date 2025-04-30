@@ -89,7 +89,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
 
                 <div>
-                  <h3 className="text-sm text-gray-400">Tools</h3>
+                  <h3 className="text-sm text-gray-400">Details Tags</h3>
                   <div className="flex flex-wrap gap-2 mt-1">
                     {project.tools.map((tool) => (
                       <span key={tool} className="text-xs px-2 py-1 bg-gray-800 text-purple-300 rounded-full">
