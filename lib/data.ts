@@ -148,32 +148,33 @@ I designed and implemented a MetaHuman character editor, enabling users to modif
   },
   {
     id: "6",
-    slug: "mystic-forest",
-    title: "Mystic Forest",
-    description: "An atmospheric adventure game with hand-drawn art and immersive sound design.",
+    slug: "duck-flight-simulator",
+    title: "Duck Flight Simulator",
+    description: "A modern remake of the 1984 classic Duck Hunt, featuring fast-paced duck hunting action in a vibrant, nature-filled setting.",
     fullDescription: `Mystic Forest is an atmospheric adventure that follows a young spirit guardian navigating an ancient forest filled with forgotten magic and mysterious creatures. The game features hand-drawn artwork that brings the enchanted world to life, complemented by an immersive soundscape that responds to player actions and environment changes.
 
-The narrative unfolds through environmental storytelling and interactions with the forest's inhabitants, with minimal UI elements to maintain immersion. Players solve puzzles by understanding the interconnected nature of the forest ecosystem and the magical properties of various plants and creatures.
+Duck Flight Simulator is a modern reimagining of the 1984 classic Duck Hunt, offering players an engaging duck hunting experience set in picturesque natural environments.
+ Armed with a variety of firearms, players aim to shoot ducks and geese that become increasingly agile with each round. Accompanied by a loyal canine companion, 
+the game combines nostalgic charm with updated visuals and mechanics, delivering a fresh take on a beloved arcade shooter.
 
-I collaborated with traditional artists to develop a unique visual style that combines hand-drawn elements with subtle animation techniques. The adaptive music system changes based on player location, time of day, and story progression, creating a deeply atmospheric experience.`,
-    image: "/placeholder.svg?height=400&width=600",
+I developed Duck Flight Simulator, a remake of the 1984 classic Duck Hunt, within just one week. Despite the tight timeline and potential for minor unpolished elements, the game features complete mechanics, responsive AI, and immersive environments that honor the charm of the original while adding a modern touch.`,
+    image: "/DuckFlightBG.jpg?height=400&width=600",
     gallery: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800&text=Spirit%20Guardian",
-      "/placeholder.svg?height=600&width=800&text=Ancient%20Tree",
+      "/DuckFlight1.jpg?height=600&width=800",
+      "/DuckFlight2.jpg?height=600&width=800",
+      "/DuckFlight3.jpg?height=600&width=800",
+      "/DuckFlight4.jpg?height=600&width=800",
     ],
-    youtubeUrl: "https://www.youtube.com/watch?v=fr-_j1miLzY",
-    url: "/projects/mystic-forest",
-    tags: ["Custom Engine", "2D", "Adventure"],
-    year: "2022",
-    role: "Game Designer & Sound Director",
-    tools: ["Custom Engine", "C++", "OpenGL", "Adobe Photoshop", "Ableton Live"],
+    youtubeUrl: "https://www.youtube.com/watch?v=QMPgN841qK4&t=56s",
+    url: "/projects/duck-flight-simulator",
+    tags: ["Unreal Engine", "Simulator", "Full Game"],
+    year: "2021",
+    role: "Solo Developer",
+    tools: ["Unreal Engine", "Simulator", "Full Game", "Shooting", "Remake", "Shipped"],
     links: {
-      demo: "https://example.com/mystic-forest-demo",
-      github: "https://github.com/yourusername/mystic-forest",
+      demo: "",
+      github: "",
+      store: "https://store.steampowered.com/app/1519190/Duck_Flight_Simulator_2021/",
     },
   },
 ]
