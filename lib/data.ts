@@ -90,32 +90,31 @@ I developed robust multiplayer systems and networking mechanics to support seaml
   },
   {
     id: "4",
-    slug: "neon-racer",
-    title: "Neon Racer",
-    description: "A high-speed racing game set in a cyberpunk future with dynamic tracks.",
-    fullDescription: `Neon Racer is an adrenaline-fueled racing experience set in a vibrant cyberpunk world. Players compete in high-stakes races through neon-lit cityscapes with tracks that dynamically change during races, forcing quick adaptations to new routes and obstacles.
+    slug: "fifa-style-mainmenu",
+    title: "Fifa Style Main Menu",
+    description: "A FIFA-style main menu featuring customizable team logos, flags, colors, and music, with smooth animations and interactive effects.",
+    fullDescription: `The main menu, inspired by FIFA's design, offers a fully customizable experience where players can personalize team logos, flags, colors, and music playlists. 
+    Enhanced by smooth animations and visually striking button effects, the menu delivers an intuitive and engaging user interface. Built with attention to detail, 
+    the system seamlessly blends functionality with style, creating an immersive entry point for players.
 
-The game features a physics-based vehicle system with customizable hover cars that can be upgraded and modified with parts won from races or purchased from the in-game black market. Each vehicle component affects handling, speed, and special abilities.
-
-I developed a procedural track generation system that creates unique race experiences while maintaining balanced difficulty. The AI opponents use machine learning techniques to adapt to player racing styles, creating increasingly challenging competitions as players progress.`,
-    image: "/placeholder.svg?height=400&width=600",
+I implemented a FIFA-inspired main menu design from Figma into Unreal Engine, building backend logic for team customization, music integration, and polished animations. My work ensured a seamless and dynamic user experience, combining aesthetic quality with robust functionality.`,
+    image: "/FifaMenuBG.jpg?height=400&width=600",
     gallery: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800&text=Vehicle%20Customization",
-      "/placeholder.svg?height=600&width=800&text=Night%20Race",
+      "/FifaMenuBG1.jpg?height=600&width=800",
+      "/FifaMenuBG2.jpg?height=600&width=800",
+      "/FifaMenuBG3.jpg?height=600&width=800",
+      "/FifaMenuBG4.jpg?height=600&width=800",
+      "/FifaMenuBG5.jpg?height=600&width=800&text=Vehicle%20Customization",
     ],
-    youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    url: "/projects/neon-racer",
-    tags: ["Unreal Engine", "3D", "Racing"],
-    year: "2023",
-    role: "Technical Director & Level Designer",
-    tools: ["Unreal Engine 5", "C++", "Blueprints", "Maya", "Houdini"],
+    youtubeUrl: "hhttps://youtu.be/3NqdRZf7Tr4",
+    url: "/projects/fifa-style-mainmenu",
+    tags: ["Unreal Engine", "UI/UX", "Main Menu"],
+    year: "2020",
+    role: "Solo Developer",
+    tools: ["Unreal Engine", "UI/UX", "Figma", "Not-Shipped"],
     links: {
-      demo: "https://example.com/neon-racer-demo",
-      download: "https://example.com/neon-racer-download",
+      demo: "",
+      download: "",
     },
   },
   {
