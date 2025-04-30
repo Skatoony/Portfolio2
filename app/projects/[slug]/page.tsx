@@ -35,8 +35,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <NetworkBackground />
 
       <div className="relative z-10">
-        {/* Hero Section - Fixed blur containment */}
-        <div className="w-full h-[30vh] md:h-[40vh] relative overflow-hidden">
+        {/* Hero Section - Reduced height by 30% */}
+        <div className="w-full h-[21vh] md:h-[28vh] relative overflow-hidden">
           {/* Container to properly contain the blur effect */}
           <div className="absolute inset-0">
             <div className="relative w-full h-full overflow-hidden">
@@ -57,8 +57,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80 z-10"></div>
 
           {/* Title container */}
-          <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 z-20">
-            <h1 className="text-4xl md:text-6xl font-bold">{project.title}</h1>
+          <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 z-20">
+            <h1 className="text-3xl md:text-5xl font-bold">{project.title}</h1>
           </div>
         </div>
 
