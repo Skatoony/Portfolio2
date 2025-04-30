@@ -35,16 +35,17 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <NetworkBackground />
 
       <div className="relative z-10">
-        {/* Hero Section - With increased blur and only title */}
+        {/* Hero Section - Fixed overlay and using project.image instead of gallery */}
         <div className="w-full h-[30vh] md:h-[40vh] relative">
           <Image
-            src={project.gallery[0] || project.image}
+            src={project.image || "/placeholder.svg"}
             alt={project.title}
             fill
             className="object-cover opacity-60 blur-[8px]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black"></div>
+          {/* Full overlay that covers the entire image */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
             <h1 className="text-4xl md:text-6xl font-bold">{project.title}</h1>
           </div>

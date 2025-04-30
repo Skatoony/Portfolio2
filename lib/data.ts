@@ -11,9 +11,9 @@ export const projects: ProjectType[] = [
 The game combines elements of business management, skill development, and creative problem-solving as players grow their handyman business and tackle increasingly complex projects. The procedural generation system ensures that no two playthroughs are ever the same, with countless job configurations and repair scenarios.
 
 I developed a custom job simulation system that generates realistic repair scenarios and tool usage based on the specific conditions of each project. The game also features a dynamic wear-and-tear system that impacts task difficulty and decision-making strategies.`,
-    image: "/HandymanBG.jpg?height=400&width=600",
+    image: "/HandymanBG.svg?height=400&width=600",
     gallery: [
-      "/HandymanBG.jpg?height=600&width=800",
+      "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800&text=Repair%20Tools",
@@ -68,7 +68,7 @@ The narrative explores themes of power, corruption, and redemption across six di
 The game combines elements of survival, base building, and scientific discovery as players navigate through the cosmos in their customizable spacecraft. The procedural generation system ensures that no two playthroughs are ever the same, with billions of possible planet configurations.
 
 I developed a custom ecosystem simulation that creates believable food chains and creature behaviors based on the environmental conditions of each planet. The game also features a dynamic weather system that affects gameplay and exploration strategies.`,
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/HandymanBG.jpg?height=400&width=600",
     gallery: [
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
