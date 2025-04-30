@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Github, ExternalLink, Download, ShoppingCart, ZoomIn } from "lucide-react"
+import { ArrowLeft, Github, ExternalLink, Download, Gamepad2 , ZoomIn } from "lucide-react"
 import { getProjectBySlug } from "@/lib/data"
 import NetworkBackground from "@/components/network-background"
 import YouTubeEmbed from "@/components/youtube-embed"
@@ -146,7 +146,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                         >
-                          <ShoppingCart className="w-4 h-4 mr-2" />
+                          <Gamepad2 className="w-4 h-4 mr-2" />
                           Steam
                         </a>
                       )}
@@ -277,7 +277,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                           >
-                            <ShoppingCart className="w-4 h-4 mr-2" />
+                            <Gamepad2 className="w-4 h-4 mr-2" />
                             Steam
                           </a>
                         )}
