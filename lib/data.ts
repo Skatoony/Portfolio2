@@ -11,7 +11,7 @@ export const projects: ProjectType[] = [
 The game combines elements of survival, base building, and scientific discovery as players navigate through the cosmos in their customizable spacecraft. The procedural generation system ensures that no two playthroughs are ever the same, with billions of possible planet configurations.
 
 I developed a custom ecosystem simulation that creates believable food chains and creature behaviors based on the environmental conditions of each planet. The game also features a dynamic weather system that affects gameplay and exploration strategies.`,
-    image: "/HandymanBG.jpg?height=400&width=600",
+    image: "/HandymanBG.svg?height=400&width=600",
     gallery: [
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
