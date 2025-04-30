@@ -49,7 +49,7 @@ I designed core gameplay mechanics, implemented physics-based dismemberment, and
     ],
     youtubeUrl: "https://www.youtube.com/watch?v=9r0sOcWfof8",
     url: "/projects/swordsman-vr",
-    tags: ["Godot", "2D", "RPG"],
+    tags: ["Unreal Engine", "VR", "Combat"],
     year: "2020",
     role: "Team Member Developer",
     tools: ["Unreal Engine", "VR", "Dismemberment", "Polish", "Gameplay", "Combat", "Shipped"],
@@ -60,33 +60,32 @@ I designed core gameplay mechanics, implemented physics-based dismemberment, and
   },
   {
     id: "3",
-    slug: "cosmic-explorers",
-    title: "Cosmic Explorers",
-    description: "A space exploration game with procedurally generated planets and ecosystems.",
-    fullDescription: `Cosmic Explorers is an immersive space exploration game that takes players on a journey through a vast, procedurally generated universe. Each planet features unique ecosystems, creatures, and resources to discover.
+    slug: "the-pitch",
+    title: "The Pitch",
+    description: "A zero-gravity multiplayer sports game with dynamic arenas and high-speed gameplay.",
+    fullDescription: `The Pitch is an immersive zero-gravity sports game that takes players into fast-paced, team-based arenas. Each match challenges players to master unique movement mechanics, strategic teamwork, and precise timing to outplay their opponents. The game combines elements of 
+    competitive multiplayer, skillful dashing, and dynamic goal scoring in an engaging and ever-evolving environment. 
+    The physics-based mechanics and competitive dynamics ensure that every game is thrilling and unique.
 
-The game combines elements of survival, base building, and scientific discovery as players navigate through the cosmos in their customizable spacecraft. The procedural generation system ensures that no two playthroughs are ever the same, with billions of possible planet configurations.
-
-I developed a custom ecosystem simulation that creates believable food chains and creature behaviors based on the environmental conditions of each planet. The game also features a dynamic weather system that affects gameplay and exploration strategies.`,
-    image: "/placeholder.svg?height=400&width=600",
+I developed robust multiplayer systems and networking mechanics to support seamless online matches. The game features responsive gameplay and real-time interactions, ensuring competitive fairness and fluid team-based dynamics.`,
+    image: "/ThePitchBG.jpg?height=400&width=600",
     gallery: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800&text=Cosmic%20UI",
-      "/placeholder.svg?height=600&width=800&text=Space%20Station",
+      "/ThePitch1.jpg?height=600&width=800",
+      "/ThePitch2.jpg?height=600&width=800",
+      "/ThePitch3.jpg?height=600&width=800",
+      "/ThePitch4.jpg?height=600&width=800",
+      "/ThePitch5.jpg?height=600&width=800&text=Space%20Station",
     ],
-    youtubeUrl: "https://www.youtube.com/watch?v=fr-_j1miLzY",
-    url: "/projects/cosmic-explorers",
-    tags: ["Unity", "3D", "Procedural Generation"],
-    year: "2023",
-    role: "Lead Developer & Game Designer",
-    tools: ["Unity", "C#", "Blender", "Substance Painter", "FMOD"],
+    youtubeUrl: "",
+    url: "/projects/the-pitch",
+    tags: ["Unreal Engine", "Competitive", "Multiplayer"],
+    year: "2025",
+    role: "Team Member Developer",
+    tools: ["Unreal Engine", "Competitive", "Multiplayer", "Gameplay", "Not-Shipped"],
     links: {
-      demo: "https://example.com/cosmic-explorers-demo",
-      github: "https://github.com/yourusername/cosmic-explorers",
-      download: "https://example.com/cosmic-explorers-download",
+      demo: "",
+      github: "",
+      store: "https://store.steampowered.com/app/3482770/The_Pitch/",
     },
   },
   {
