@@ -100,8 +100,8 @@ I developed robust multiplayer systems and networking mechanics to support seaml
 I implemented a FIFA-inspired main menu design from Figma into Unreal Engine, building backend logic for team customization, music integration, and polished animations. My work ensured a seamless and dynamic user experience, combining aesthetic quality with robust functionality.`,
     image: "/FifaMenuBG.jpg?height=400&width=600",
     gallery: [
-      "/FifaMenuBG1.jpg?height=600&width=800",
       "/FifaMenuBG2.jpg?height=600&width=800",
+      "/FifaMenuBG1.jpg?height=600&width=800",
       "/FifaMenuBG3.jpg?height=600&width=800",
       "/FifaMenuBG4.jpg?height=600&width=800",
       "/FifaMenuBG5.jpg?height=600&width=800&text=Vehicle%20Customization",
