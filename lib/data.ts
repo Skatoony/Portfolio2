@@ -211,7 +211,7 @@ I contributed as a front-end developer for Monkey Empire, designing and implemen
   {
     id: "8",
     slug: "wail",
-    title: "wail",
+    title: "Wail",
     description: "A single-player psychological horror game where players must break the Banshee’s curse by recovering relics in a haunted forest.",
     fullDescription: `Wail is a single-player horror experience developed in Unreal Engine 5. Set in a cursed forest, 
     the player must search for four relic pieces and complete a ritual inside a church to escape the Banshee’s wrath. The game blends atmospheric
@@ -225,6 +225,7 @@ I designed and developed the entire game, from core gameplay systems and AI beha
       "/Wail2.jpg?height=600&width=800",
       "/Wail3.jpg?height=600&width=800",
       "/Wail4.jpg?height=600&width=800",
+      "/Wail5.jpg?height=600&width=800",
     ],
     youtubeUrl: "https://www.youtube.com/watch?v=GMN6j57HrCI",
     url: "/projects/wail",
