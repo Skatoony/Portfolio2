@@ -222,10 +222,10 @@ I designed and developed the entire game, from core gameplay systems and AI beha
     image: "/WailBG.jpg?height=400&width=600",
     gallery: [
       "/Wail1.jpg?height=600&width=800",
-      "/Wail2.jpg?height=600&width=800",
+      "/Wail5.jpg?height=600&width=800",
       "/Wail3.jpg?height=600&width=800",
       "/Wail4.jpg?height=600&width=800",
-      "/Wail5.jpg?height=600&width=800",
+      "/Wail2.jpg?height=600&width=800",
     ],
     youtubeUrl: "https://www.youtube.com/watch?v=GMN6j57HrCI",
     url: "/projects/wail",
