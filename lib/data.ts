@@ -264,6 +264,31 @@ I designed and developed the entire game, from core gameplay systems and AI beha
       store: "",
     },
   },
+  {
+    id: "10",
+    slug: "prosoccer-online",
+    title: "Pro Soccer Online",
+    description: "Pro Soccer Online is a 1st/3rd person, highly skill based, online multiplayer soccer game. It offers a sports game experience unlike any other with smooth, physics based, input driven gameplay that is competitive and rewarding with no pay to win mechanics.",
+    fullDescription: `Assisted development on Pro Soccer Online (Steam multiplayer soccer game) by integrating the Steam API, ensuring robust client networking, reducing lag, and fixing critical bugs to improve stability and online performance.`,
+    image: "/SoccerBG.jpg?height=400&width=600",
+    gallery: [
+      "/Soccer1.jpg?height=600&width=800",
+      "/Soccer2.jpg?height=600&width=800",
+      "/Soccer3.jpg?height=600&width=800",
+      "/Soccer4.jpg?height=600&width=800",
+    ],
+    youtubeUrl: "https://www.youtube.com/watch?v=uFRCk30O9VI",
+    url: "/projects/prosoccer-online",
+    tags: ["Unreal Engine", "Multiplayer", "Simulator"],
+    year: "2024",
+    role: "Team Member Developer",
+    tools: ["Unreal Engine", "Online Sessions", "Steam API", "Networking"],
+    links: {
+      demo: "",
+      github: "https://www.youtube.com/watch?v=uFRCk30O9VI",
+      store: "https://store.steampowered.com/app/1583320/Pro_Soccer_Online",
+    },
+  },
 ]
 
 export function getProjectBySlug(slug: string): ProjectType | undefined {
