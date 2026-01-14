@@ -282,7 +282,7 @@ I designed and developed the entire game, from core gameplay systems and AI beha
     tags: ["Unreal Engine", "Multiplayer", "Simulator"],
     year: "2024",
     role: "Team Member Developer",
-    tools: ["Unreal Engine", "Online Sessions", "Steam API", "Networking"],
+    tools: ["Unreal Engine", "Online Sessions", "Steam API", "Networking", "Shipped"],
     links: {
       demo: "",
       github: "https://www.youtube.com/watch?v=uFRCk30O9VI",
