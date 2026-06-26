@@ -5,6 +5,7 @@ import AmbientGlow from "@/components/ambient-glow"
 import SiteHeader from "@/components/site-header"
 import ProjectCard from "@/components/project-card"
 import { projects } from "@/lib/data"
+import { siteConfig, SITE_URL } from "@/lib/site"
 
 export default function Home() {
   const shipped = projects.filter((p) =>
@@ -14,9 +15,44 @@ export default function Home() {
     }),
   ).length
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        name: siteConfig.name,
+        jobTitle: "Game Developer",
+        description: siteConfig.description,
+        url: SITE_URL,
+        email: `mailto:${siteConfig.email}`,
+        sameAs: [siteConfig.discord],
+        knowsAbout: [
+          "Unreal Engine",
+          "Game Development",
+          "Multiplayer Networking",
+          "Virtual Reality",
+          "Gameplay Programming",
+          "AI Development",
+          "UI/UX for Games",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        name: `${siteConfig.name} — Portfolio`,
+        url: SITE_URL,
+        author: { "@type": "Person", name: siteConfig.name },
+      },
+    ],
+  }
+
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-[#08080c] text-white">
-      <NetworkBackground />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="relative min-h-screen w-full overflow-hidden bg-[#08080c] text-white">
+        <NetworkBackground />
       <AmbientGlow />
       <SiteHeader workHref="#work" />
 
@@ -145,6 +181,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   )
 }

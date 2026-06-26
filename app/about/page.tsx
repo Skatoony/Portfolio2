@@ -1,8 +1,22 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft, Mail, MessageCircle, Sparkles } from "lucide-react"
 import NetworkBackground from "@/components/network-background"
 import AmbientGlow from "@/components/ambient-glow"
 import SiteHeader from "@/components/site-header"
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About Raul Anuta — a game developer focused on building immersive, engaging experiences with Unreal Engine, from multiplayer and VR to AI, UI/UX and tools.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About — Raul Anuta",
+    description:
+      "Game developer focused on immersive Unreal Engine experiences: multiplayer, VR, AI, UI/UX and more.",
+    url: "/about",
+  },
+}
 
 const skills = [
   "Game Design & Development",

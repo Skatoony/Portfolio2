@@ -16,16 +16,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/40 hover:bg-white/[0.05] hover:shadow-2xl hover:shadow-violet-500/10"
+      className="group relative flex h-full transform-gpu flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-300 [backface-visibility:hidden] hover:-translate-y-1 hover:border-violet-400/40 hover:bg-white/[0.05] hover:shadow-2xl hover:shadow-violet-500/10"
     >
       {/* Image */}
-      <div className="relative h-56 w-full overflow-hidden">
+      <div className="relative h-56 w-full overflow-hidden [transform:translateZ(0)] [backface-visibility:hidden]">
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.07]"
+          className="transform-gpu object-cover transition-transform duration-500 [backface-visibility:hidden] group-hover:scale-[1.07]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b11] via-[#0b0b11]/20 to-transparent" />
 
