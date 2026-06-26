@@ -1,11 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import {
   ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
   ExternalLink,
   Download,
   Gamepad2,
@@ -131,6 +133,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const project = getProjectBySlug(params.slug)
   const [galleryOpen, setGalleryOpen] = useState(false)
   const [initialImageIndex, setInitialImageIndex] = useState(0)
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   if (!project) {
     notFound()
@@ -139,6 +142,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const openGallery = (index: number) => {
     setInitialImageIndex(index)
     setGalleryOpen(true)
+  }
+
+  const scrollGallery = (dir: "left" | "right") => {
+    const el = scrollRef.current
+    if (!el) return
+    const amount = el.clientWidth * 0.8
+    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" })
   }
 
   return (
@@ -190,6 +200,56 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </Link>
           </div>
 
+          {/* Gallery carousel — surfaced high so it isn't missed */}
+          <section className="mb-12">
+            <div className="mb-5 flex items-end justify-between gap-4">
+              <h2 className="font-display text-2xl font-bold tracking-tight">Gallery</h2>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => scrollGallery("left")}
+                  aria-label="Previous images"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollGallery("right")}
+                  aria-label="Next images"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+
+            <div
+              ref={scrollRef}
+              className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {project.gallery.map((image, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => openGallery(index)}
+                  className="group relative aspect-video w-[80%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 sm:w-[48%] lg:w-[32%]"
+                >
+                  <Image
+                    src={image || "/placeholder.svg"}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 80vw, (max-width: 1024px) 48vw, 32vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/40 group-hover:opacity-100">
+                    <ZoomIn className="h-7 w-7 text-white" />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </section>
+
           {/* Mobile details first */}
           <div className="mb-10 md:hidden">
             <ProjectDetailsPanel project={project} />
@@ -214,30 +274,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   <YouTubeEmbed url={project.youtubeUrl} />
                 </div>
               )}
-
-              <div className="mt-16">
-                <h2 className="mb-6 font-display text-2xl font-bold tracking-tight">Gallery</h2>
-                <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-                  {project.gallery.map((image, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      className="group relative aspect-video cursor-pointer overflow-hidden rounded-xl border border-white/10"
-                      onClick={() => openGallery(index)}
-                    >
-                      <Image
-                        src={image || "/placeholder.svg"}
-                        alt={`${project.title} screenshot ${index + 1}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/40 group-hover:opacity-100">
-                        <ZoomIn className="h-7 w-7 text-white" />
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
             </div>
 
             {/* Sidebar */}
