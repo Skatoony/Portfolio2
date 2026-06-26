@@ -31,11 +31,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Top badges */}
         <div className="absolute inset-x-0 top-0 flex items-center justify-between p-3">
-          <span className="rounded-full bg-black/50 px-2.5 py-1 text-xs font-medium text-gray-200 backdrop-blur-sm">
+          <span className="rounded-full bg-black/70 px-2.5 py-1 text-xs font-medium text-gray-200">
             {project.year}
           </span>
           {isShipped && (
-            <span className="rounded-full border border-emerald-400/40 bg-emerald-950/80 px-2.5 py-1 text-xs font-semibold text-emerald-300 backdrop-blur-sm">
+            <span className="rounded-full border border-emerald-400/40 bg-emerald-950/90 px-2.5 py-1 text-xs font-semibold text-emerald-300">
               Shipped
             </span>
           )}
@@ -47,8 +47,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      {/* Body */}
-      <div className="flex flex-1 flex-col p-5">
+      {/* Body — glass-style panel under the photo (opaque gradient, no per-frame blur) */}
+      <div className="relative flex flex-1 flex-col border-t border-white/10 bg-gradient-to-b from-[#1a1726] to-[#100e18] p-5 [box-shadow:inset_0_1px_0_0_rgba(255,255,255,0.12)] transition-colors duration-300 group-hover:from-[#221a32]">
         <h3 className="font-display text-lg font-bold text-white transition-colors group-hover:text-violet-200">
           {project.title}
         </h3>

@@ -33,9 +33,15 @@ export default function NetworkBackground() {
     let animationFrameId: number
     let particles: Particle[] = []
 
-    // Tuned for performance: fewer particles cuts the per-frame O(n²) connection cost
-    const particleCount = isMobile ? 70 : 60
-    const connectionDistance = isMobile ? 150 : 180
+    // Respect users who prefer reduced motion: render one static frame, no loop.
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+
+    // Tuned for performance: fewer particles cuts the per-frame O(n²) connection cost.
+    // Mobile is kept deliberately light to avoid draining low-power GPUs.
+    const particleCount = isMobile ? 26 : 48
+    const connectionDistance = isMobile ? 120 : 160
 
     // First, define the Particle class before using it
     class Particle {
@@ -122,12 +128,14 @@ export default function NetworkBackground() {
 
     // Then define the resizeCanvas function that calls init
     const resizeCanvas = () => {
-      // Set to device pixel ratio for better rendering on high DPI screens
-      const dpr = window.devicePixelRatio || 1
+      // Cap the device pixel ratio — filling the whole canvas every frame at a 3x DPR
+      // (common on phones) costs ~9x the pixels. Capping it is a major mobile win.
+      const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5)
       canvas.width = window.innerWidth * dpr
       canvas.height = window.innerHeight * dpr
 
-      // Scale the context to ensure correct drawing operations
+      // Reset any prior scaling before applying the new one (resize can fire repeatedly)
+      ctx.setTransform(1, 0, 0, 1, 0, 0)
       ctx.scale(dpr, dpr)
 
       // Set the CSS size
@@ -188,8 +196,7 @@ export default function NetworkBackground() {
       }
     }
 
-    // Animation loop - optimize for mobile
-    const animate = () => {
+    const drawFrame = () => {
       // Use a semi-transparent near-black clear to create trail effect
       // Matches the page background (#08080c) for a seamless blend
       ctx!.fillStyle = `rgba(8, 8, 12, ${isMobile ? 0.1 : 0.05})`
@@ -201,16 +208,45 @@ export default function NetworkBackground() {
       })
 
       connect()
+    }
+
+    // Throttle to ~30fps (24 on mobile) — the trail effect doesn't need 60/120fps and
+    // halving the frame rate roughly halves CPU/GPU use.
+    const frameInterval = 1000 / (isMobile ? 24 : 30)
+    let lastFrame = 0
+
+    const animate = (time = 0) => {
       animationFrameId = requestAnimationFrame(animate)
+      if (time - lastFrame < frameInterval) return
+      lastFrame = time
+      drawFrame()
+    }
+
+    // Pause the loop entirely when the tab is hidden (no point animating offscreen)
+    const handleVisibility = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationFrameId)
+      } else {
+        lastFrame = 0
+        animationFrameId = requestAnimationFrame(animate)
+      }
     }
 
     // Set up event listeners and start animation
     window.addEventListener("resize", resizeCanvas)
     resizeCanvas() // This will call init()
-    animate()
+
+    if (prefersReducedMotion) {
+      // One static frame, no animation loop.
+      drawFrame()
+    } else {
+      document.addEventListener("visibilitychange", handleVisibility)
+      animate()
+    }
 
     return () => {
       window.removeEventListener("resize", resizeCanvas)
+      document.removeEventListener("visibilitychange", handleVisibility)
       cancelAnimationFrame(animationFrameId)
     }
   }, [isMobile]) // Re-initialize when isMobile changes
