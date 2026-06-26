@@ -149,7 +149,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
       <div className="relative z-10">
         {/* Hero */}
-        <div className="relative h-[38vh] min-h-[280px] w-full overflow-hidden md:h-[44vh]">
+        <div className="relative h-[30vh] min-h-[220px] w-full overflow-hidden md:h-[34vh]">
           <Image
             src={project.image || "/placeholder.svg"}
             alt={project.title}

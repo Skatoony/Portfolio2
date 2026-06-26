@@ -28,13 +28,13 @@ export default function SiteHeader({ workHref = "/#work" }: SiteHeaderProps) {
         <Link
           href="/"
           className="group flex items-center gap-2.5"
-          aria-label="HPQ — home"
+          aria-label="Raul Anuta — home"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 font-display text-sm font-bold text-white shadow-lg shadow-fuchsia-500/20 transition-transform duration-300 group-hover:scale-105">
-            H
+            R
           </span>
           <span className="font-display text-lg font-semibold tracking-tight text-white">
-            HPQ
+            Raul Anuta
           </span>
         </Link>
 
@@ -56,7 +56,9 @@ export default function SiteHeader({ workHref = "/#work" }: SiteHeaderProps) {
             About
           </Link>
           <a
-            href="mailto:hpqdevpro@gmail.com"
+            href="https://discord.com/users/1259926949950918809"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-violet-100"
           >
             Contact

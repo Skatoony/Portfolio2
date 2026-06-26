@@ -19,7 +19,7 @@ export default function Home() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 pb-24 pt-32 md:px-8 md:pt-40">
         {/* Hero */}
-        <section className="mb-24 md:mb-32">
+        <section className="mb-12 md:mb-16">
           <div className="max-w-3xl">
             <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-gray-300 backdrop-blur">
               <span className="relative flex h-2 w-2">
@@ -33,7 +33,7 @@ export default function Home() {
               className="animate-fade-up mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl"
               style={{ animationDelay: "80ms" }}
             >
-              Hi, I&apos;m <span className="text-gradient">HPQ</span>.
+              Hi, I&apos;m <span className="text-gradient">Raul Anuta</span>.
               <br />I build games.
             </h1>
 
@@ -126,7 +126,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-gray-500 sm:flex-row md:px-8">
-          <p>© {new Date().getFullYear()} HPQ. Built with Next.js.</p>
+          <p>© {new Date().getFullYear()} Raul Anuta. Built with Next.js.</p>
           <div className="flex items-center gap-5">
             <a href="mailto:hpqdevpro@gmail.com" className="transition-colors hover:text-white">
               Email

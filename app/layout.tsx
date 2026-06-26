@@ -17,9 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "HPQ — Game Developer",
+  title: "Raul Anuta — Game Developer",
   description:
-    "Portfolio of HPQ, a game developer crafting immersive games, prototypes and tools in Unreal Engine.",
+    "Portfolio of Raul Anuta, a game developer crafting immersive games, prototypes and tools in Unreal Engine.",
   generator: "v0.dev",
 }
 

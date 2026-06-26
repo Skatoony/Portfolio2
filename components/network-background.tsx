@@ -33,8 +33,8 @@ export default function NetworkBackground() {
     let animationFrameId: number
     let particles: Particle[] = []
 
-    // Significantly increased particle count for mobile, kept desktop the same
-    const particleCount = isMobile ? 100 : 80 // Increased from 50 to 100 for mobile
+    // Tuned for performance: fewer particles cuts the per-frame O(n²) connection cost
+    const particleCount = isMobile ? 70 : 60
     const connectionDistance = isMobile ? 150 : 180
 
     // First, define the Particle class before using it
