@@ -215,6 +215,7 @@ export default function NetworkBackground() {
     }
   }, [isMobile]) // Re-initialize when isMobile changes
 
-  // Lower z-index to ensure navigation is clickable
-  return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0" />
+  // Fixed so the animation covers the full page at any scroll position (cheaper than
+  // growing the canvas to the document height) while staying behind the content.
+  return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0" />
 }
