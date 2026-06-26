@@ -18,6 +18,9 @@ As a core team-member developer, I contributed across a huge surface of the game
       "/CradleOfSins4.jpg",
       "/CradleOfSins5.jpg",
       "/CradleOfSins6.jpg",
+      "/CradleOfSins7.jpg",
+      "/CradleOfSins8.jpg",
+      "/CradleOfSins9.jpg",
     ],
     contributions: [
       "Designed and implemented a broad range of core gameplay mechanics",

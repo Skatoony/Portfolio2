@@ -212,3 +212,16 @@
     margin-bottom: 0.75rem;
   }
 }
+
+/* Rotating glow used by the "Check Videos" button */
+@keyframes spin-around {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-ring {
+    animation: none;
+  }
+}

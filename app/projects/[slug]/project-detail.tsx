@@ -207,10 +207,16 @@ export default function ProjectDetail({ project }: { project: ProjectType }) {
                   <button
                     type="button"
                     onClick={scrollToVideos}
-                    className="mr-1 inline-flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 text-sm font-semibold text-white transition-colors hover:border-violet-400/40 hover:bg-white/10"
+                    className="group relative mr-1 inline-flex h-10 overflow-hidden rounded-full bg-violet-500/40 p-[1.5px] shadow-[0_0_18px_rgba(168,85,247,0.5)] transition-shadow duration-300 hover:shadow-[0_0_28px_rgba(217,70,239,0.7)]"
                   >
-                    <Play className="h-4 w-4 text-violet-300" />
-                    Check Videos
+                    <span
+                      aria-hidden
+                      className="glow-ring absolute inset-[-150%] animate-[spin-around_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_210deg,#c084fc_280deg,#f0abfc_310deg,#c084fc_340deg,transparent_360deg)]"
+                    />
+                    <span className="relative z-10 inline-flex h-full items-center gap-2 rounded-full bg-[#1a1230] px-4 text-sm font-semibold text-white transition-colors group-hover:bg-[#241640]">
+                      <Play className="h-4 w-4 fill-violet-300 text-violet-300" />
+                      Check Videos
+                    </span>
                   </button>
                 )}
                 <button
@@ -308,7 +314,12 @@ export default function ProjectDetail({ project }: { project: ProjectType }) {
               {videos.length > 1 ? (
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
                   {videos.map((url) => (
-                    <YouTubeEmbed key={url} url={url} />
+                    <div
+                      key={url}
+                      className="relative transition-all duration-300 ease-out will-change-transform md:hover:z-20 md:hover:scale-[1.18] md:hover:shadow-2xl md:hover:shadow-violet-500/30"
+                    >
+                      <YouTubeEmbed url={url} />
+                    </div>
                   ))}
                 </div>
               ) : (

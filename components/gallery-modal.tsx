@@ -89,15 +89,15 @@ export default function GalleryModal({ images, initialIndex, isOpen, onClose }: 
         <ChevronRight className="h-6 w-6" />
       </button>
 
-      {/* Image container */}
-      <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto p-4 flex items-center justify-center">
-        <div className="relative w-full h-full">
+      {/* Image container — sized to fill ~70%+ of the viewport */}
+      <div className="relative mx-auto flex h-full w-full max-w-[90vw] items-center justify-center p-4 md:max-h-[85vh] md:max-w-[85vw]">
+        <div className="relative h-full w-full">
           <Image
             src={images[currentIndex] || "/placeholder.svg"}
             alt={`Gallery image ${currentIndex + 1}`}
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 100vw, 80vw"
+            sizes="90vw"
             priority
           />
         </div>
