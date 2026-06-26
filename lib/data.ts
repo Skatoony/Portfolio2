@@ -2,6 +2,48 @@ import type { ProjectType } from "./types"
 
 export const projects: ProjectType[] = [
   {
+    id: "12",
+    slug: "character-slots-lobby-inventory",
+    title: "Character Slots | Lobby | Inventory",
+    description:
+      "A solo-built suite of core multiplayer systems: a Destiny-style character selection screen, an online lobby, and a modular inventory with equippable gear and skins — all backed by persistent save data.",
+    fullDescription: `This project brings together three foundational systems that a modern multiplayer game relies on: character selection, a pre-game lobby, and a full inventory and equipment system. The character selection flow is inspired by Destiny — players can browse, preview and pick between multiple saved characters before jumping into a session.
+
+From there, an online lobby lets players gather and get ready before a match begins. The inventory system is fully modular, with dynamic equipment slots for head, torso, legs and feet, plus interchangeable skins for each item. Everything the player customises is persisted through a robust save-game layer, so characters, equipped gear and skins are stored and restored across sessions.
+
+I designed and developed all of it solo — from the UI/UX and gameplay logic to the data structures and save/load pipeline that ties the whole experience together.`,
+    image: "/CharacterSlotsBG.jpg",
+    gallery: [
+      "/CharacterSlots1.jpg",
+      "/CharacterSlots2.jpg",
+      "/CharacterSlots3.jpg",
+      "/CharacterSlots4.jpg",
+      "/CharacterSlots5.jpg",
+    ],
+    contributions: [
+      "Built a Destiny-inspired character selection system for browsing, previewing and choosing between multiple saved characters",
+      "Created an online multiplayer lobby where players gather and ready up before a match",
+      "Developed a modular inventory system with dynamic equipment slots for head, torso, legs and feet",
+      "Added interchangeable item skins across all equipment slots",
+      "Implemented a full save-game layer so characters, equipped gear and skins persist across sessions",
+    ],
+    youtubeUrl: "https://youtu.be/qMcXUUJ_d0k",
+    url: "/projects/character-slots-lobby-inventory",
+    tags: ["Unreal Engine", "Character Customization", "Inventory"],
+    year: "2026",
+    role: "Solo Developer",
+    tools: [
+      "Unreal Engine",
+      "Character Customization",
+      "Inventory",
+      "Multiplayer",
+      "Not-Shipped",
+    ],
+    links: {
+      github: "https://youtu.be/qMcXUUJ_d0k",
+    },
+  },
+  {
     id: "11",
     slug: "cradle-of-sins",
     title: "Cradle of Sins",
