@@ -76,7 +76,7 @@ I developed robust multiplayer systems and networking mechanics to support seaml
       "/ThePitch4.jpg?height=600&width=800",
       "/ThePitch5.jpg?height=600&width=800&text=Space%20Station",
     ],
-    youtubeUrl: "",
+    youtubeUrl: "https://youtu.be/43i8AuhcBrM",
     url: "/projects/the-pitch",
     tags: ["Unreal Engine", "Competitive", "Multiplayer"],
     year: "2025",
@@ -232,7 +232,7 @@ I designed and developed the entire game, from core gameplay systems and AI beha
     tags: ["Unreal Engine", "Horror", "Full Game"],
     year: "2025",
     role: "Solo Developer",
-    tools: ["Unreal Engine", "Horror", "Full Game", "Singleplayer", "Indie"],
+    tools: ["Unreal Engine", "Horror", "Full Game", "Singleplayer", "Indie", "Shipped"],
     links: {
       demo: "",
       github: "https://www.youtube.com/watch?v=GMN6j57HrCI",

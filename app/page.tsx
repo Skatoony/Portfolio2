@@ -8,7 +8,10 @@ import { projects } from "@/lib/data"
 
 export default function Home() {
   const shipped = projects.filter((p) =>
-    p.tools.some((t) => t.toLowerCase().includes("shipped")),
+    p.tools.some((t) => {
+      const s = t.toLowerCase()
+      return s.includes("shipped") && !s.includes("not")
+    }),
   ).length
 
   return (

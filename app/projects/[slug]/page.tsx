@@ -159,7 +159,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
       <div className="relative z-10">
         {/* Hero */}
-        <div className="relative h-[22vh] min-h-[180px] w-full overflow-hidden md:h-[24vh]">
+        <div className="relative w-full overflow-hidden">
           <Image
             src={project.image || "/placeholder.svg"}
             alt={project.title}
@@ -169,22 +169,20 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#08080c]/40 via-[#08080c]/60 to-[#08080c]" />
 
-          <div className="absolute inset-x-0 bottom-0">
-            <div className="mx-auto max-w-6xl px-4 pb-5 md:px-8 md:pb-7">
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
-                {project.title}
-              </h1>
+          <div className="relative mx-auto max-w-6xl px-4 pb-6 pt-24 md:px-8 md:pb-8 md:pt-28">
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
+            <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
+              {project.title}
+            </h1>
           </div>
         </div>
 

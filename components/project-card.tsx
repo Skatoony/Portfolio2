@@ -8,7 +8,10 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const isShipped = project.tools.some((t) => t.toLowerCase().includes("shipped"))
+  const isShipped = project.tools.some((t) => {
+    const s = t.toLowerCase()
+    return s.includes("shipped") && !s.includes("not")
+  })
 
   return (
     <Link
