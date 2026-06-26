@@ -62,31 +62,31 @@ export default function GalleryModal({ images, initialIndex, isOpen, onClose }: 
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 p-2 text-white bg-black/50 rounded-full hover:bg-black/70 transition-colors z-50"
+        className="absolute right-4 top-4 z-50 rounded-full border border-white/10 bg-white/10 p-2.5 text-white backdrop-blur transition-colors hover:bg-white/20"
         aria-label="Close gallery"
       >
-        <X className="w-6 h-6" />
+        <X className="h-6 w-6" />
       </button>
 
       {/* Navigation buttons */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 p-2 text-white bg-black/50 rounded-full hover:bg-black/70 transition-colors z-50"
+        className="absolute left-4 z-50 rounded-full border border-white/10 bg-white/10 p-2.5 text-white backdrop-blur transition-colors hover:bg-white/20"
         aria-label="Previous image"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="h-6 w-6" />
       </button>
 
       <button
         onClick={goToNext}
-        className="absolute right-4 p-2 text-white bg-black/50 rounded-full hover:bg-black/70 transition-colors z-50"
+        className="absolute right-4 z-50 rounded-full border border-white/10 bg-white/10 p-2.5 text-white backdrop-blur transition-colors hover:bg-white/20"
         aria-label="Next image"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="h-6 w-6" />
       </button>
 
       {/* Image container */}

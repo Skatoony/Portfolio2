@@ -4,9 +4,21 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Github, ExternalLink, Download, Gamepad2 , ZoomIn, Youtube } from "lucide-react"
+import {
+  ArrowLeft,
+  ExternalLink,
+  Download,
+  Gamepad2,
+  ZoomIn,
+  Youtube,
+  Calendar,
+  User,
+} from "lucide-react"
 import { getProjectBySlug } from "@/lib/data"
+import type { ProjectType } from "@/lib/types"
 import NetworkBackground from "@/components/network-background"
+import AmbientGlow from "@/components/ambient-glow"
+import SiteHeader from "@/components/site-header"
 import YouTubeEmbed from "@/components/youtube-embed"
 import GalleryModal from "@/components/gallery-modal"
 
@@ -14,6 +26,105 @@ interface ProjectPageProps {
   params: {
     slug: string
   }
+}
+
+function ProjectLinks({ links }: { links: NonNullable<ProjectType["links"]> }) {
+  return (
+    <div className="flex flex-col gap-2.5">
+      {links.demo && (
+        <a
+          href={links.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/25 transition-all hover:brightness-110"
+        >
+          <ExternalLink className="h-4 w-4" />
+          Try Demo
+        </a>
+      )}
+      {links.github && (
+        <a
+          href={links.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+        >
+          <Youtube className="h-4 w-4 text-red-400" />
+          Watch Video
+        </a>
+      )}
+      {links.download && (
+        <a
+          href={links.download}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+        >
+          <Download className="h-4 w-4" />
+          Download
+        </a>
+      )}
+      {links.store && (
+        <a
+          href={links.store}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+        >
+          <Gamepad2 className="h-4 w-4 text-sky-400" />
+          View on Steam
+        </a>
+      )}
+    </div>
+  )
+}
+
+function ProjectDetailsPanel({ project }: { project: ProjectType }) {
+  const hasLinks =
+    project.links &&
+    Object.values(project.links).some((v) => v && v.length > 0)
+
+  return (
+    <div className="glass rounded-2xl p-6">
+      <h2 className="font-display text-lg font-bold">Project Details</h2>
+      <div className="mt-5 space-y-5">
+        <div className="flex items-start gap-3">
+          <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-violet-400" />
+          <div>
+            <h3 className="text-xs uppercase tracking-wider text-gray-500">Year</h3>
+            <p className="text-white">{project.year}</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <User className="mt-0.5 h-4 w-4 shrink-0 text-violet-400" />
+          <div>
+            <h3 className="text-xs uppercase tracking-wider text-gray-500">Role</h3>
+            <p className="text-white">{project.role}</p>
+          </div>
+        </div>
+        <div>
+          <h3 className="text-xs uppercase tracking-wider text-gray-500">Stack &amp; tags</h3>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {project.tools.map((tool) => (
+              <span
+                key={tool}
+                className="rounded-full border border-white/5 bg-white/5 px-2.5 py-1 text-xs font-medium text-violet-200"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {hasLinks && (
+          <div className="border-t border-white/10 pt-5">
+            <h3 className="mb-3 text-xs uppercase tracking-wider text-gray-500">Links</h3>
+            <ProjectLinks links={project.links!} />
+          </div>
+        )}
+      </div>
+    </div>
+  )
 }
 
 export default function ProjectPage({ params }: ProjectPageProps) {
@@ -31,267 +142,114 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-black text-white">
+    <main className="relative min-h-screen w-full overflow-hidden bg-[#08080c] text-white">
       <NetworkBackground />
+      <AmbientGlow />
+      <SiteHeader />
 
       <div className="relative z-10">
-        {/* Hero Section - Reduced height by 30% */}
-        <div className="w-full h-[21vh] md:h-[28vh] relative overflow-hidden">
-          {/* Container to properly contain the blur effect */}
-          <div className="absolute inset-0">
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src={project.image || "/placeholder.svg"}
-                alt={project.title}
-                fill
-                className="object-cover opacity-60 blur-[8px]"
-                priority
-              />
-            </div>
-          </div>
+        {/* Hero */}
+        <div className="relative h-[38vh] min-h-[280px] w-full overflow-hidden md:h-[44vh]">
+          <Image
+            src={project.image || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-cover opacity-50 blur-[6px]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#08080c]/40 via-[#08080c]/60 to-[#08080c]" />
 
-          {/* Solid overlay to ensure complete coverage */}
-          <div className="absolute inset-0 bg-black/40"></div>
-
-          {/* Gradient overlay on top for better visual effect */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80 z-10"></div>
-
-          {/* Title container */}
-          <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 z-20">
-            <h1 className="text-3xl md:text-5xl font-bold">{project.title}</h1>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
-          <Link href="/" className="inline-flex items-center text-gray-300 hover:text-white mb-8 group">
-            <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-            Back to all projects
-          </Link>
-        </div>
-
-        {/* Content - Reordered for mobile */}
-        <div className="max-w-6xl mx-auto px-4 md:px-8 mb-16">
-          {/* Project Details - Shows first on mobile, hidden on desktop */}
-          <div className="md:hidden mb-8">
-            <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
-              <h2 className="text-xl font-bold mb-6 pb-4 border-b border-gray-800">Project Details</h2>
-
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-sm text-gray-400">Year</h3>
-                  <p className="text-white">{project.year}</p>
-                </div>
-
-                <div>
-                  <h3 className="text-sm text-gray-400">Role</h3>
-                  <p className="text-white">{project.role}</p>
-                </div>
-
-                <div>
-                  <h3 className="text-sm text-gray-400">Tags</h3>
-                  <div className="flex flex-wrap gap-2 mt-1">
-                    {project.tools.map((tool) => (
-                      <span key={tool} className="text-xs px-2 py-1 bg-gray-800 text-purple-300 rounded-full">
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {project.links && (
-                  <div className="pt-4 mt-4 border-t border-gray-800">
-                    <h3 className="text-sm text-gray-400 mb-3">Links</h3>
-                    <div className="flex flex-col gap-2">
-                      {project.links.demo && (
-                        <a
-                          href={project.links.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-white bg-purple-700 hover:bg-purple-600 px-4 py-2 rounded-md transition-colors"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Try Demo
-                        </a>
-                      )}
-
-                      {project.links.github && (
-                        <a
-                          href={project.links.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
-                        >
-                          <Youtube className="w-4 h-4 mr-2" />
-                          Video
-                        </a>
-                      )}
-
-                      {project.links.download && (
-                        <a
-                          href={project.links.download}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
-                        >
-                          <Download className="w-4 h-4 mr-2" />
-                          Download
-                        </a>
-                      )}
-
-                      {project.links.store && (
-                        <a
-                          href={project.links.store}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
-                        >
-                          <Gamepad2 className="w-4 h-4 mr-2" />
-                          Steam
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                )}
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="mx-auto max-w-6xl px-4 pb-10 md:px-8 md:pb-14">
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
+              <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
+                {project.title}
+              </h1>
             </div>
           </div>
+        </div>
 
-          {/* Desktop layout with grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Main Content */}
+        {/* Body */}
+        <div className="mx-auto max-w-6xl px-4 pb-24 md:px-8">
+          <div className="py-8">
+            <Link
+              href="/#work"
+              className="group inline-flex items-center text-sm text-gray-400 transition-colors hover:text-white"
+            >
+              <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
+              Back to all projects
+            </Link>
+          </div>
+
+          {/* Mobile details first */}
+          <div className="mb-10 md:hidden">
+            <ProjectDetailsPanel project={project} />
+          </div>
+
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+            {/* Main content */}
             <div className="md:col-span-2">
-              {/* Project description at the top */}
-              <p className="text-xl text-gray-300 mb-8">{project.description}</p>
+              <p className="text-xl leading-relaxed text-gray-200">{project.description}</p>
 
-              <div className="prose prose-lg prose-invert max-w-none">
+              <div className="prose prose-lg prose-invert mt-8 max-w-none prose-p:text-gray-300">
                 {project.fullDescription.split("\n\n").map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}
               </div>
 
-              {/* YouTube Video */}
               {project.youtubeUrl && (
                 <div className="mt-16">
-                  <h2 className="text-2xl font-bold mb-6">Video Preview</h2>
+                  <h2 className="mb-6 font-display text-2xl font-bold tracking-tight">
+                    Video Preview
+                  </h2>
                   <YouTubeEmbed url={project.youtubeUrl} />
                 </div>
               )}
 
-              {/* Gallery */}
               <div className="mt-16">
-                <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <h2 className="mb-6 font-display text-2xl font-bold tracking-tight">Gallery</h2>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
                   {project.gallery.map((image, index) => (
-                    <div
+                    <button
                       key={index}
-                      className="relative aspect-video rounded-lg overflow-hidden cursor-pointer group"
+                      type="button"
+                      className="group relative aspect-video cursor-pointer overflow-hidden rounded-xl border border-white/10"
                       onClick={() => openGallery(index)}
                     >
                       <Image
                         src={image || "/placeholder.svg"}
                         alt={`${project.title} screenshot ${index + 1}`}
                         fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                        <ZoomIn className="w-8 h-8 text-white" />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/40 group-hover:opacity-100">
+                        <ZoomIn className="h-7 w-7 text-white" />
                       </div>
-                    </div>
+                    </button>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Sidebar - Hidden on mobile since we show it at the top */}
+            {/* Sidebar */}
             <div className="hidden md:block">
-              <div className="bg-gray-900 rounded-lg p-6 border border-gray-800 sticky top-8">
-                <h2 className="text-xl font-bold mb-6 pb-4 border-b border-gray-800">Project Details</h2>
-
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-sm text-gray-400">Year</h3>
-                    <p className="text-white">{project.year}</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm text-gray-400">Role</h3>
-                    <p className="text-white">{project.role}</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm text-gray-400">Tags</h3>
-                    <div className="flex flex-wrap gap-2 mt-1">
-                      {project.tools.map((tool) => (
-                        <span key={tool} className="text-xs px-2 py-1 bg-gray-800 text-purple-300 rounded-full">
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {project.links && (
-                    <div className="pt-4 mt-4 border-t border-gray-800">
-                      <h3 className="text-sm text-gray-400 mb-3">Links</h3>
-                      <div className="flex flex-col gap-2">
-                        {project.links.demo && (
-                          <a
-                            href={project.links.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-white bg-purple-700 hover:bg-purple-600 px-4 py-2 rounded-md transition-colors"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Try Demo
-                          </a>
-                        )}
-
-                        {project.links.github && (
-                          <a
-                            href={project.links.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
-                          >
-                            <Youtube className="w-4 h-4 mr-2" />
-                            Video
-                          </a>
-                        )}
-
-                        {project.links.download && (
-                          <a
-                            href={project.links.download}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
-                          >
-                            <Download className="w-4 h-4 mr-2" />
-                            Download
-                          </a>
-                        )}
-
-                        {project.links.store && (
-                          <a
-                            href={project.links.store}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
-                          >
-                            <Gamepad2 className="w-4 h-4 mr-2" />
-                            Steam
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                </div>
+              <div className="sticky top-28">
+                <ProjectDetailsPanel project={project} />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Gallery Modal */}
       <GalleryModal
         images={project.gallery}
         initialIndex={initialImageIndex}

@@ -190,9 +190,9 @@ export default function NetworkBackground() {
 
     // Animation loop - optimize for mobile
     const animate = () => {
-      // Use a semi-transparent black clear to create trail effect
-      // Less transparent on mobile for more visible particles
-      ctx!.fillStyle = `rgba(0, 0, 0, ${isMobile ? 0.1 : 0.05})`
+      // Use a semi-transparent near-black clear to create trail effect
+      // Matches the page background (#08080c) for a seamless blend
+      ctx!.fillStyle = `rgba(8, 8, 12, ${isMobile ? 0.1 : 0.05})`
       ctx!.fillRect(0, 0, canvas.width, canvas.height)
 
       particles.forEach((particle) => {
