@@ -149,7 +149,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
       <div className="relative z-10">
         {/* Hero */}
-        <div className="relative h-[30vh] min-h-[220px] w-full overflow-hidden md:h-[34vh]">
+        <div className="relative h-[22vh] min-h-[180px] w-full overflow-hidden md:h-[24vh]">
           <Image
             src={project.image || "/placeholder.svg"}
             alt={project.title}
@@ -160,7 +160,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="absolute inset-0 bg-gradient-to-b from-[#08080c]/40 via-[#08080c]/60 to-[#08080c]" />
 
           <div className="absolute inset-x-0 bottom-0">
-            <div className="mx-auto max-w-6xl px-4 pb-10 md:px-8 md:pb-14">
+            <div className="mx-auto max-w-6xl px-4 pb-5 md:px-8 md:pb-7">
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
