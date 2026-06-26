@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Github, ExternalLink, Download, Gamepad2 , ZoomIn, Youtube } from "lucide-react"
+import { ArrowLeft, Github, ExternalLink, Download, ShoppingCart, ZoomIn } from "lucide-react"
 import { getProjectBySlug } from "@/lib/data"
 import NetworkBackground from "@/components/network-background"
 import YouTubeEmbed from "@/components/youtube-embed"
@@ -89,7 +89,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
 
                 <div>
-                  <h3 className="text-sm text-gray-400">Tags</h3>
+                  <h3 className="text-sm text-gray-400">Tools</h3>
                   <div className="flex flex-wrap gap-2 mt-1">
                     {project.tools.map((tool) => (
                       <span key={tool} className="text-xs px-2 py-1 bg-gray-800 text-purple-300 rounded-full">
@@ -122,8 +122,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                         >
-                          <Youtube className="w-4 h-4 mr-2" />
-                          Video
+                          <Github className="w-4 h-4 mr-2" />
+                          View Source
                         </a>
                       )}
 
@@ -146,7 +146,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                         >
-                          <Gamepad2 className="w-4 h-4 mr-2" />
+                          <ShoppingCart className="w-4 h-4 mr-2" />
                           Steam
                         </a>
                       )}
@@ -220,7 +220,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   </div>
 
                   <div>
-                    <h3 className="text-sm text-gray-400">Tags</h3>
+                    <h3 className="text-sm text-gray-400">Tools</h3>
                     <div className="flex flex-wrap gap-2 mt-1">
                       {project.tools.map((tool) => (
                         <span key={tool} className="text-xs px-2 py-1 bg-gray-800 text-purple-300 rounded-full">
@@ -253,8 +253,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                           >
-                            <Youtube className="w-4 h-4 mr-2" />
-                            Video
+                            <Github className="w-4 h-4 mr-2" />
+                            View Source
                           </a>
                         )}
 
@@ -277,8 +277,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md transition-colors"
                           >
-                            <Gamepad2 className="w-4 h-4 mr-2" />
-                            Steam
+                            <ShoppingCart className="w-4 h-4 mr-2" />
+                            Purchase
                           </a>
                         )}
                       </div>
