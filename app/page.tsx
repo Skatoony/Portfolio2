@@ -20,7 +20,7 @@ export default function Home() {
       <AmbientGlow />
       <SiteHeader workHref="#work" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-24 pt-32 md:px-8 md:pt-40">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-24 pt-32 md:px-8 md:pt-40">
         {/* Hero */}
         <section className="mb-12 md:mb-16">
           <div className="max-w-3xl">
@@ -112,7 +112,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {projects.map((project, i) => (
               <div
                 key={project.id}
@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-gray-500 sm:flex-row md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-gray-500 sm:flex-row md:px-8">
           <p>© {new Date().getFullYear()} Raul Anuta. Built with Next.js.</p>
           <div className="flex items-center gap-5">
             <a href="mailto:hpqdevpro@gmail.com" className="transition-colors hover:text-white">

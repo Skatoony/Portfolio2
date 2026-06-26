@@ -35,7 +35,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.year}
           </span>
           {isShipped && (
-            <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 text-xs font-medium text-emerald-300 backdrop-blur-sm">
+            <span className="rounded-full border border-emerald-400/40 bg-emerald-950/80 px-2.5 py-1 text-xs font-semibold text-emerald-300 backdrop-blur-sm">
               Shipped
             </span>
           )}

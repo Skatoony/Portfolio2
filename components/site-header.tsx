@@ -21,7 +21,7 @@ export default function SiteHeader({ workHref = "/#work" }: SiteHeaderProps) {
   return (
     <header className="fixed top-0 left-0 z-40 w-full">
       <div
-        className={`mx-auto flex max-w-6xl items-center justify-between px-4 transition-all duration-300 md:px-8 ${
+        className={`mx-auto flex max-w-7xl items-center justify-between px-4 transition-all duration-300 md:px-8 ${
           scrolled ? "py-3" : "py-5"
         }`}
       >
