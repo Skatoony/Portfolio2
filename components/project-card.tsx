@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/40 hover:bg-white/[0.05] hover:shadow-2xl hover:shadow-violet-500/10"
     >
       {/* Image */}
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative h-56 w-full overflow-hidden">
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}

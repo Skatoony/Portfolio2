@@ -103,11 +103,11 @@ export default function AboutPage() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="mailto:hpqdevpro@gmail.com"
+              href="mailto:raulanuta28@gmail.com"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/25 transition-all hover:shadow-fuchsia-500/40 hover:brightness-110"
             >
               <Mail className="h-4 w-4" />
-              hpqdevpro@gmail.com
+              raulanuta28@gmail.com
             </a>
             <a
               href="https://discordapp.com/users/1259926949950918809"
