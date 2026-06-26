@@ -7,11 +7,20 @@ interface ProjectCardProps {
   project: ProjectType
 }
 
+const BIG_PROJECTS = new Set([
+  "cradle-of-sins",
+  "handyman-corporation",
+  "swordsman-vr",
+  "the-pitch",
+  "wail",
+])
+
 export default function ProjectCard({ project }: ProjectCardProps) {
   const isShipped = project.tools.some((t) => {
     const s = t.toLowerCase()
     return s.includes("shipped") && !s.includes("not")
   })
+  const isBig = BIG_PROJECTS.has(project.slug)
 
   return (
     <Link
@@ -31,9 +40,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Top badges */}
         <div className="absolute inset-x-0 top-0 flex items-center justify-between p-3">
-          <span className="rounded-full bg-black/70 px-2.5 py-1 text-xs font-medium text-gray-200">
-            {project.year}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="rounded-full bg-black/70 px-2.5 py-1 text-xs font-medium text-gray-200">
+              {project.year}
+            </span>
+            {isBig && (
+              <span className="relative inline-flex overflow-hidden rounded-full bg-violet-500/40 p-[1.5px] shadow-[0_0_12px_rgba(168,85,247,0.65)]">
+                <span
+                  aria-hidden
+                  className="glow-ring absolute inset-[-150%] animate-[spin-around_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_210deg,#c084fc_280deg,#f0abfc_310deg,#c084fc_340deg,transparent_360deg)]"
+                />
+                <span className="relative z-10 inline-flex items-center rounded-full bg-[#1a1230] px-2.5 py-1 text-xs font-bold tracking-wider text-white">
+                  BIG
+                </span>
+              </span>
+            )}
+          </div>
           {isShipped && (
             <span className="rounded-full border border-emerald-400/40 bg-emerald-950/90 px-2.5 py-1 text-xs font-semibold text-emerald-300">
               Shipped
