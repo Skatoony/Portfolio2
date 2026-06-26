@@ -144,6 +144,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     setGalleryOpen(true)
   }
 
+  const videos =
+    project.youtubeUrls && project.youtubeUrls.length > 0
+      ? project.youtubeUrls
+      : project.youtubeUrl
+        ? [project.youtubeUrl]
+        : []
+
   const scrollGallery = (dir: "left" | "right") => {
     const el = scrollRef.current
     if (!el) return
@@ -264,12 +271,38 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 ))}
               </div>
 
-              {project.youtubeUrl && (
+              {project.contributions && project.contributions.length > 0 && (
+                <div className="mt-12">
+                  <h2 className="mb-5 font-display text-2xl font-bold tracking-tight">
+                    What I worked on
+                  </h2>
+                  <ul className="space-y-3">
+                    {project.contributions.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-300">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-400" />
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {videos.length > 0 && (
                 <div className="mt-16">
                   <h2 className="mb-6 font-display text-2xl font-bold tracking-tight">
-                    Video Preview
+                    {videos.length > 1 ? "Videos" : "Video Preview"}
                   </h2>
-                  <YouTubeEmbed url={project.youtubeUrl} />
+                  <div
+                    className={
+                      videos.length > 1
+                        ? "grid grid-cols-1 gap-5 lg:grid-cols-2"
+                        : ""
+                    }
+                  >
+                    {videos.map((url) => (
+                      <YouTubeEmbed key={url} url={url} />
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

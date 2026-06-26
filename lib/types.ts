@@ -12,6 +12,8 @@ export interface ProjectType {
   role: string
   tools: string[]
   youtubeUrl?: string
+  youtubeUrls?: string[]
+  contributions?: string[]
   links?: {
     demo?: string
     github?: string

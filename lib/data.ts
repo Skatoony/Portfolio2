@@ -2,6 +2,65 @@ import type { ProjectType } from "./types"
 
 export const projects: ProjectType[] = [
   {
+    id: "11",
+    slug: "cradle-of-sins",
+    title: "Cradle of Sins",
+    description:
+      "A PC & VR cross-platform action-adventure set in a comically dark world of weird and badass creatures — gear up and battle with friends across the dominions of warring Architects.",
+    fullDescription: `Cradle of Sins is a PC & VR cross-platform action-adventure game set in a comically dark world filled with weird and badass creatures. Players gear up and invite friends to wage ever-lasting battles over the dominions of different Architects, blending fast-paced combat with co-op multiplayer across both flat-screen and virtual reality.
+
+As a core team-member developer, I contributed across a huge surface of the game — from the moment-to-moment gameplay and combat to the underlying networking, AI and systems that hold it all together. My work spanned both the PC and VR builds, ensuring features felt great and stayed in sync across the cross-platform experience.`,
+    image: "/CradleBG.jpg",
+    gallery: [
+      "/CradleOfSins1.jpg",
+      "/CradleOfSins2.jpg",
+      "/CradleOfSins3.jpg",
+      "/CradleOfSins4.jpg",
+      "/CradleOfSins5.jpg",
+      "/CradleOfSins6.jpg",
+    ],
+    contributions: [
+      "Designed and implemented a broad range of core gameplay mechanics",
+      "Built networking & replication for seamless PC ↔ VR cross-platform multiplayer",
+      "Created enemy AI and behaviour systems",
+      "Developed in-game mini-games",
+      "Implemented a full character customization system",
+      "Built the inventory system",
+      "Designed and implemented UI/UX across the game",
+      "Created weapons and the combat system",
+      "Built parkour & traversal movement systems",
+      "Contributed many additional features, fixes and polish throughout development",
+    ],
+    youtubeUrls: [
+      "https://youtu.be/lKeQ3ktMZw8",
+      "https://youtu.be/sc25QEHOnB4",
+      "https://youtu.be/iyeTBmlZ3Bs",
+      "https://youtu.be/JuhxRtRyhQY",
+      "https://youtu.be/t_1SlalLBLI",
+      "https://youtu.be/z0K8K2617ho",
+      "https://youtu.be/IpN5MlGtm2k",
+      "https://youtu.be/vNTlMXuOIlU",
+      "https://youtu.be/M2xjSdnkXLw",
+      "https://youtu.be/yE_KELUebnM",
+      "https://youtu.be/6HVj8D25yq8",
+      "https://youtu.be/aRlm-2SF6Go",
+    ],
+    url: "/projects/cradle-of-sins",
+    tags: ["Unreal Engine", "VR / PC Cross-platform", "Multiplayer"],
+    year: "2023 – 2025",
+    role: "Team Member Developer",
+    tools: [
+      "Unreal Engine",
+      "VR / PC Cross-platform",
+      "Multiplayer",
+      "Gameplay",
+      "Not-Shipped",
+    ],
+    links: {
+      store: "https://store.steampowered.com/app/1037380/Cradle_of_Sins/",
+    },
+  },
+  {
     id: "1",
     slug: "handyman-corporation",
     title: "Handyman Corporation",
