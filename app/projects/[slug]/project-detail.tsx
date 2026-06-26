@@ -312,11 +312,11 @@ export default function ProjectDetail({ project }: { project: ProjectType }) {
                 {videos.length > 1 ? "Videos" : "Video Preview"}
               </h2>
               {videos.length > 1 ? (
-                <div className="grid grid-cols-1 items-start gap-4 [grid-auto-flow:dense] sm:grid-cols-2 xl:grid-cols-3">
+                <div className="grid grid-cols-1 items-start gap-5 sm:grid-cols-2 xl:grid-cols-3">
                   {videos.map((url) => (
                     <div
                       key={url}
-                      className="relative overflow-hidden rounded-lg ring-1 ring-transparent transition-shadow duration-300 md:hover:z-10 md:hover:shadow-2xl md:hover:shadow-violet-500/30 md:hover:ring-violet-400/40 md:hover:[grid-column:span_2] md:hover:[grid-row:span_2]"
+                      className="relative transform-gpu rounded-lg transition-all duration-300 ease-out [backface-visibility:hidden] md:hover:z-20 md:hover:scale-[1.15] md:hover:shadow-2xl md:hover:shadow-violet-500/40"
                     >
                       <YouTubeEmbed url={url} />
                     </div>
