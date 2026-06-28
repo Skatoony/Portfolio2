@@ -11,25 +11,32 @@ export const SITE_URL = (
 
 export const siteConfig = {
   name: "Raul Anuta",
-  title: "Raul Anuta — Game Developer",
+  title: "Raul Anuta — Unreal Engine Developer",
   description:
-    "Portfolio of Raul Anuta, a game developer specialising in Unreal Engine — multiplayer systems, VR combat, gameplay, AI, UI/UX, prototypes and tools.",
+    "Raul Anuta is an Unreal Engine developer building multiplayer systems, VR combat, gameplay, AI and UI/UX. Explore shipped games, prototypes and tools in his portfolio.",
   url: SITE_URL,
   // Default social-share image (1920×1080 screenshot that ships in /public).
   ogImage: "/CradleOfSins1.jpg",
   email: "raulanuta28@gmail.com",
   discord: "https://discord.com/users/1259926949950918809",
+  // Public profiles — strengthens "Raul Anuta" entity recognition in Google.
+  // Add your YouTube channel, LinkedIn, GitHub, Steam dev page, X/Twitter, etc.
+  profiles: [
+    "https://discord.com/users/1259926949950918809",
+  ],
   keywords: [
     "Raul Anuta",
-    "game developer",
+    "Raul Anuta game developer",
+    "Raul Anuta Unreal Engine",
     "Unreal Engine developer",
-    "game programmer",
-    "multiplayer game development",
-    "VR developer",
-    "Unreal Engine 5",
+    "Unreal Engine developer portfolio",
+    "freelance Unreal Engine developer",
+    "Unreal Engine 5 developer",
+    "game developer portfolio",
+    "multiplayer game developer",
+    "VR game developer",
     "gameplay programmer",
     "UI/UX for games",
-    "game portfolio",
   ],
 }
 

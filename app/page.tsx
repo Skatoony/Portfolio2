@@ -21,13 +21,14 @@ export default function Home() {
       {
         "@type": "Person",
         name: siteConfig.name,
-        jobTitle: "Game Developer",
+        jobTitle: "Unreal Engine Developer",
         description: siteConfig.description,
         url: SITE_URL,
         email: `mailto:${siteConfig.email}`,
-        sameAs: [siteConfig.discord],
+        sameAs: siteConfig.profiles,
         knowsAbout: [
           "Unreal Engine",
+          "Unreal Engine 5",
           "Game Development",
           "Multiplayer Networking",
           "Virtual Reality",

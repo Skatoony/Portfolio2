@@ -63,6 +63,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION to the token from Google Search Console
+  // to verify ownership (enables indexing insights + sitemap submission).
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
   category: "technology",
 }
 
