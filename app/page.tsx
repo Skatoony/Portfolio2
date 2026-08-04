@@ -59,8 +59,8 @@ export default function Home() {
 
       <div className="relative z-10 mx-auto max-w-[1600px] px-4 pb-24 pt-32 md:px-8 md:pt-40">
         {/* Impersonation warning */}
-        <div className="mb-10 flex items-start gap-3 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3.5 text-sm text-red-200 backdrop-blur">
-          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-red-400" />
+        <div className="animate-warning-pulse mb-10 flex items-start gap-[14.4px] rounded-xl border border-red-500/30 bg-red-500/10 px-[19.2px] py-[16.8px] text-[16.8px] text-red-200 backdrop-blur">
+          <AlertTriangle className="mt-[2.4px] h-6 w-6 shrink-0 text-red-400" />
           <p>
             <span className="font-semibold text-red-100">Warning:</span> some people are
             impersonating me on Discord. My real Discord is only{" "}
