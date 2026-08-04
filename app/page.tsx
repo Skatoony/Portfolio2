@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowDownRight, Gamepad2, Sparkles } from "lucide-react"
+import { AlertTriangle, ArrowDownRight, Gamepad2, Sparkles } from "lucide-react"
 import NetworkBackground from "@/components/network-background"
 import AmbientGlow from "@/components/ambient-glow"
 import SiteHeader from "@/components/site-header"
@@ -58,6 +58,18 @@ export default function Home() {
       <SiteHeader workHref="#work" />
 
       <div className="relative z-10 mx-auto max-w-[1600px] px-4 pb-24 pt-32 md:px-8 md:pt-40">
+        {/* Impersonation warning */}
+        <div className="mb-10 flex items-start gap-3 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3.5 text-sm text-red-200 backdrop-blur">
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-red-400" />
+          <p>
+            <span className="font-semibold text-red-100">Warning:</span> some people are
+            impersonating me on Discord. My real Discord is only{" "}
+            <span className="font-semibold text-red-100">HPQ</span> with the tag{" "}
+            <span className="font-semibold text-red-100">@hpqnone</span>. Do not respond to or
+            send money to anyone else claiming to be me.
+          </p>
+        </div>
+
         {/* Hero */}
         <section className="mb-12 md:mb-16">
           <div className="max-w-3xl">
