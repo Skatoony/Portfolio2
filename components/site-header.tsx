@@ -28,7 +28,7 @@ export default function SiteHeader({ workHref = "/#work" }: SiteHeaderProps) {
         <Link
           href="/"
           className="group flex items-center gap-2.5"
-          aria-label="Raul Anuta — home"
+          aria-label="Raul Anuta home"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 font-display text-sm font-bold text-white shadow-lg shadow-fuchsia-500/20 transition-transform duration-300 group-hover:scale-105">
             R

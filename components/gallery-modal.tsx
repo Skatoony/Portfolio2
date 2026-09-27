@@ -89,7 +89,7 @@ export default function GalleryModal({ images, initialIndex, isOpen, onClose }: 
         <ChevronRight className="h-6 w-6" />
       </button>
 
-      {/* Image container — sized to fill ~70%+ of the viewport */}
+      {/* Image container sized to fill ~70%+ of the viewport */}
       <div className="relative mx-auto flex h-full w-full max-w-[90vw] items-center justify-center p-4 md:max-h-[85vh] md:max-w-[85vw]">
         <div className="relative h-full w-full">
           <Image

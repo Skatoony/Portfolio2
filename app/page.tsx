@@ -39,7 +39,7 @@ export default function Home() {
       },
       {
         "@type": "WebSite",
-        name: `${siteConfig.name} — Portfolio`,
+        name: `${siteConfig.name} | Portfolio`,
         url: SITE_URL,
         author: { "@type": "Person", name: siteConfig.name },
       },
@@ -94,7 +94,7 @@ export default function Home() {
               style={{ animationDelay: "160ms" }}
             >
               Game developer specialising in{" "}
-              <span className="font-semibold text-white">Unreal Engine</span> — from
+              <span className="font-semibold text-white">Unreal Engine</span>, from
               multiplayer systems and VR combat to prototypes, tools and the
               debugging in&#8209;between.
             </p>

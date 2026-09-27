@@ -11,7 +11,7 @@ export const SITE_URL = (
 
 export const siteConfig = {
   name: "Raul Anuta",
-  title: "Raul Anuta — Unreal Engine Developer",
+  title: "Raul Anuta | Unreal Engine Developer",
   description:
     "Raul Anuta is an Unreal Engine developer building multiplayer systems, VR combat, gameplay, AI and UI/UX. Explore shipped games, prototypes and tools in his portfolio.",
   url: SITE_URL,
@@ -19,7 +19,7 @@ export const siteConfig = {
   ogImage: "/CradleOfSins1.jpg",
   email: "raulanuta28@gmail.com",
   discord: "https://discord.com/users/1259926949950918809",
-  // Public profiles — strengthens "Raul Anuta" entity recognition in Google.
+  // Public profiles strengthen "Raul Anuta" entity recognition in Google.
   // Add your YouTube channel, LinkedIn, GitHub, Steam dev page, X/Twitter, etc.
   profiles: [
     "https://discord.com/users/1259926949950918809",

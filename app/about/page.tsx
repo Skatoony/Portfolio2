@@ -8,10 +8,10 @@ import SiteHeader from "@/components/site-header"
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Raul Anuta — a game developer focused on building immersive, engaging experiences with Unreal Engine, from multiplayer and VR to AI, UI/UX and tools.",
+    "About Raul Anuta, a game developer focused on building immersive, engaging experiences with Unreal Engine, from multiplayer and VR to AI, UI/UX and tools.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About — Raul Anuta",
+    title: "About | Raul Anuta",
     description:
       "Game developer focused on immersive Unreal Engine experiences: multiplayer, VR, AI, UI/UX and more.",
     url: "/about",
@@ -73,7 +73,7 @@ export default function AboutPage() {
         >
           I&apos;m a game developer focused on building immersive, engaging
           experiences with Unreal Engine. Leveraging its powerful tools, I bring
-          creative visions to life — delivering interactive digital experiences that
+          creative visions to life, delivering interactive digital experiences that
           captivate and inspire.
         </p>
 
@@ -102,7 +102,7 @@ export default function AboutPage() {
             <p className="leading-relaxed text-gray-300">
               I&apos;ve worked on a range of projects, from indie PC games to complex
               multiplayer and VR titles. My work spans solo development and
-              collaborating with diverse teams to deliver unique, engaging games —
+              collaborating with diverse teams to deliver unique, engaging games,
               owning everything from core systems and AI to UI/UX, networking and the
               final polish.
             </p>

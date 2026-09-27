@@ -70,7 +70,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      {/* Body — glass-style panel under the photo (opaque gradient, no per-frame blur) */}
+      {/* Glass-style panel under the photo (opaque gradient, no per-frame blur) */}
       <div className="relative flex flex-1 flex-col border-t border-white/10 bg-gradient-to-b from-[#1a1726] to-[#100e18] p-5 [box-shadow:inset_0_1px_0_0_rgba(255,255,255,0.12)] transition-colors duration-300 group-hover:from-[#221a32]">
         <h3 className="font-display text-lg font-bold text-white transition-colors group-hover:text-violet-200">
           {project.title}

@@ -198,7 +198,7 @@ export default function ProjectDetail({ project }: { project: ProjectType }) {
             </Link>
           </div>
 
-          {/* Gallery carousel — surfaced high so it isn't missed */}
+          {/* Gallery carousel is surfaced high so it isn't missed */}
           <section className="mb-12">
             <div className="mb-5 flex items-end justify-between gap-4">
               <h2 className="font-display text-2xl font-bold tracking-tight">Gallery</h2>
@@ -305,7 +305,7 @@ export default function ProjectDetail({ project }: { project: ProjectType }) {
             </div>
           </div>
 
-          {/* Videos — full width below the two-column layout */}
+          {/* Videos span the full width below the two-column layout */}
           {videos.length > 0 && (
             <div ref={videosRef} className="mt-16 scroll-mt-28">
               <h2 className="mb-6 font-display text-2xl font-bold tracking-tight">

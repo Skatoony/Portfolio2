@@ -30,14 +30,14 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     alternates: { canonical: url },
     openGraph: {
       type: "article",
-      title: `${project.title} — ${siteConfig.name}`,
+      title: `${project.title} | ${siteConfig.name}`,
       description: project.description,
       url,
       images: [{ url: image, alt: project.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} — ${siteConfig.name}`,
+      title: `${project.title} | ${siteConfig.name}`,
       description: project.description,
       images: [image],
     },

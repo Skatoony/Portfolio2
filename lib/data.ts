@@ -7,7 +7,7 @@ export const projects: ProjectType[] = [
     title: "Broke Wizards",
     description:
       "A chaotic 1–6 player co-op adventure where wizard roommates battle monsters, race, tackle odd jobs and cause magical mayhem to make rent before their Imp Landlord loses patience.",
-    fullDescription: `Broke Wizards is a 1–6 player online co-op action-adventure from 5TH Cell, the creators of Scribblenauts. Players share a home as wizard roommates and take on an unpredictable mix of jobs — from monster-filled combat encounters and magical races to prop hunt, music sessions and a wizard-themed mobile snake game — all in the name of paying rent to a giant Imp Landlord.
+    fullDescription: `Broke Wizards is a 1–6 player online co-op action-adventure from 5TH Cell, the creators of Scribblenauts. Players share a home as wizard roommates and take on an unpredictable mix of jobs, including monster-filled combat encounters, magical races, prop hunt, music sessions and a wizard-themed mobile snake game. It is all in the name of paying rent to a giant Imp Landlord.
 
 My primary focus was multiplayer networking and the gameplay systems that make the shared world feel responsive and cohesive. I built a wide range of features across combat, AI, transformations, racing, social activities, customization and mini-games, making sure they worked reliably for every player in a session.
 
@@ -64,12 +64,12 @@ Beyond owning individual features, I regularly supported the wider team by stren
     slug: "character-slots-lobby-inventory",
     title: "Character Slots | Lobby | Inventory",
     description:
-      "A solo-built suite of core multiplayer systems: a Destiny-style character selection screen, an online lobby, and a modular inventory with equippable gear and skins — all backed by persistent save data.",
-    fullDescription: `This project brings together three foundational systems that a modern multiplayer game relies on: character selection, a pre-game lobby, and a full inventory and equipment system. The character selection flow is inspired by Destiny — players can browse, preview and pick between multiple saved characters before jumping into a session.
+      "A solo-built suite of core multiplayer systems: a Destiny-style character selection screen, an online lobby, and a modular inventory with equippable gear and skins, all backed by persistent save data.",
+    fullDescription: `This project brings together three foundational systems that a modern multiplayer game relies on: character selection, a pre-game lobby, and a full inventory and equipment system. The character selection flow is inspired by Destiny. Players can browse, preview and pick between multiple saved characters before jumping into a session.
 
 From there, an online lobby lets players gather and get ready before a match begins. The inventory system is fully modular, with dynamic equipment slots for head, torso, legs and feet, plus interchangeable skins for each item. Everything the player customises is persisted through a robust save-game layer, so characters, equipped gear and skins are stored and restored across sessions.
 
-I designed and developed all of it solo — from the UI/UX and gameplay logic to the data structures and save/load pipeline that ties the whole experience together.`,
+I designed and developed all of it solo, from the UI/UX and gameplay logic to the data structures and save/load pipeline that ties the whole experience together.`,
     image: "/CharacterSlotsBG.jpg",
     gallery: [
       "/CharacterSlots1.jpg",
@@ -106,10 +106,10 @@ I designed and developed all of it solo — from the UI/UX and gameplay logic to
     slug: "cradle-of-sins",
     title: "Cradle of Sins",
     description:
-      "A PC & VR cross-platform action-adventure set in a comically dark world of weird and badass creatures — gear up and battle with friends across the dominions of warring Architects.",
+      "A PC & VR cross-platform action-adventure set in a comically dark world of weird and badass creatures. Gear up and battle with friends across the dominions of warring Architects.",
     fullDescription: `Cradle of Sins is a PC & VR cross-platform action-adventure game set in a comically dark world filled with weird and badass creatures. Players gear up and invite friends to wage ever-lasting battles over the dominions of different Architects, blending fast-paced combat with co-op multiplayer across both flat-screen and virtual reality.
 
-As a core team-member developer, I contributed across a huge surface of the game — from the moment-to-moment gameplay and combat to the underlying networking, AI and systems that hold it all together. My work spanned both the PC and VR builds, ensuring features felt great and stayed in sync across the cross-platform experience.`,
+As a core team-member developer, I contributed across a huge surface of the game, from the moment-to-moment gameplay and combat to the underlying networking, AI and systems that hold it all together. My work spanned both the PC and VR builds, ensuring features felt great and stayed in sync across the cross-platform experience.`,
     image: "/CradleBG.jpg",
     gallery: [
       "/CradleOfSins1.jpg",

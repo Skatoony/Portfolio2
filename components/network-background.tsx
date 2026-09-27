@@ -128,7 +128,7 @@ export default function NetworkBackground() {
 
     // Then define the resizeCanvas function that calls init
     const resizeCanvas = () => {
-      // Cap the device pixel ratio — filling the whole canvas every frame at a 3x DPR
+      // Cap the device pixel ratio because filling the whole canvas every frame at a 3x DPR
       // (common on phones) costs ~9x the pixels. Capping it is a major mobile win.
       const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5)
       canvas.width = window.innerWidth * dpr
@@ -210,7 +210,7 @@ export default function NetworkBackground() {
       connect()
     }
 
-    // Throttle to ~30fps (24 on mobile) — the trail effect doesn't need 60/120fps and
+    // Throttle to ~30fps (24 on mobile). The trail effect doesn't need 60/120fps and
     // halving the frame rate roughly halves CPU/GPU use.
     const frameInterval = 1000 / (isMobile ? 24 : 30)
     let lastFrame = 0
