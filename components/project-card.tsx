@@ -8,6 +8,7 @@ interface ProjectCardProps {
 }
 
 const BIG_PROJECTS = new Set([
+  "broke-wizards",
   "cradle-of-sins",
   "handyman-corporation",
   "swordsman-vr",

@@ -2,6 +2,64 @@ import type { ProjectType } from "./types"
 
 export const projects: ProjectType[] = [
   {
+    id: "13",
+    slug: "broke-wizards",
+    title: "Broke Wizards",
+    description:
+      "A chaotic 1–6 player co-op adventure where wizard roommates battle monsters, race, tackle odd jobs and cause magical mayhem to make rent before their Imp Landlord loses patience.",
+    fullDescription: `Broke Wizards is a 1–6 player online co-op action-adventure from 5TH Cell, the creators of Scribblenauts. Players share a home as wizard roommates and take on an unpredictable mix of jobs — from monster-filled combat encounters and magical races to prop hunt, music sessions and a wizard-themed mobile snake game — all in the name of paying rent to a giant Imp Landlord.
+
+My primary focus was multiplayer networking and the gameplay systems that make the shared world feel responsive and cohesive. I built a wide range of features across combat, AI, transformations, racing, social activities, customization and mini-games, making sure they worked reliably for every player in a session.
+
+Beyond owning individual features, I regularly supported the wider team by strengthening existing gameplay systems, improving implementations created by other developers, resolving integration issues and adding the polish needed to turn separate mechanics into a consistent co-op experience.`,
+    image: "/BrokeWizardsBG.jpg",
+    gallery: [
+      "/BrokeWizards1.jpg",
+      "/BrokeWizards2.jpg",
+      "/BrokeWizards3.jpg",
+      "/BrokeWizards4.jpg",
+      "/BrokeWizards5.jpg",
+      "/BrokeWizards6.jpg",
+      "/BrokeWizards7.jpg",
+      "/BrokeWizards8.jpg",
+      "/BrokeWizards9.jpg",
+      "/BrokeWizards10.jpg",
+      "/BrokeWizards11.jpg",
+      "/BrokeWizards12.jpg",
+      "/BrokeWizards13.jpg",
+    ],
+    contributions: [
+      "Developed and maintained core multiplayer networking and replication across the co-op experience",
+      "Created Slitherin', an in-game mobile snake game with its own multiplayer lobby",
+      "Built the Raven Race and Hoverboard Race gameplay systems",
+      "Implemented playable werewolf, raven and vegetable transformations",
+      "Developed spells and combat abilities using Unreal Engine's Gameplay Ability System",
+      "Created more than 15 AI-driven monsters, each with distinct behaviours and abilities",
+      "Built a multiplayer music mini-game that lets players perform together on instruments",
+      "Implemented an adaptive music system with separate idle, combat and night themes",
+      "Developed the character customization system",
+      "Created a soccer game mode with tackling, goals and multiplayer match logic",
+      "Improved and expanded gameplay systems built by other developers, resolving issues and adding polish across the project",
+    ],
+    youtubeUrl: "https://www.youtube.com/watch?v=R-75zED-3Go",
+    url: "/projects/broke-wizards",
+    tags: ["Unreal Engine", "Online Co-op", "Gameplay Systems"],
+    year: "Q4 2026",
+    role: "Gameplay & Network Developer",
+    tools: [
+      "Unreal Engine",
+      "Networking",
+      "Gameplay Ability System",
+      "AI",
+      "Minigames",
+      "Online Co-op",
+      "Not-Shipped",
+    ],
+    links: {
+      store: "https://store.steampowered.com/app/4398500/Broke_Wizards/",
+    },
+  },
+  {
     id: "12",
     slug: "character-slots-lobby-inventory",
     title: "Character Slots | Lobby | Inventory",
